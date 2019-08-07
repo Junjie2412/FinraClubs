@@ -1,0 +1,42 @@
+.topnav {
+    overflow: hidden;
+    background-color: #61dafb;
+    height: 60px;
+}
+
+.topnav button {
+    float: left;
+    color: mediumslateblue;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: inherit;
+    border: none;
+    font-weight: bold;
+    height: 100%;
+}
+
+.topnav button:hover {
+    background-color: aqua;
+    color: mediumslateblue;
+}
+
+.topnav button.active {
+    background-color: aqua;
+    color: mediumslateblue;
+    outline: none;
+    border: none;
+}
+
+.topnav button:focus {
+    background-color: aqua;
+    color: mediumslateblue;
+    outline: none;
+    border: none;
+}
+
+.topnav-right {
+    float: right;
+    height: 60px;
+}
