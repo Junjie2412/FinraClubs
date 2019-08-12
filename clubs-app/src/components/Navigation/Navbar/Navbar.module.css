@@ -1,12 +1,14 @@
 .topnav {
     overflow: hidden;
-    background-color: #61dafb;
+    background-color: white;
     height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
 }
 
 .topnav button {
     float: left;
-    color: mediumslateblue;
     text-align: center;
     text-decoration: none;
     padding: 10px 20px;
@@ -18,22 +20,37 @@
 }
 
 .topnav button:hover {
-    background-color: aqua;
-    color: mediumslateblue;
+    background-color: #292A3E;
+    color: white;
 }
 
 .topnav button.active {
-    background-color: aqua;
-    color: mediumslateblue;
+    background-color: #292A3E;
+    color: white;
     outline: none;
     border: none;
 }
 
 .topnav button:focus {
-    background-color: aqua;
-    color: mediumslateblue;
+    background-color: #292A3E;
+    color: white;
     outline: none;
     border: none;
+}
+
+.topnav button:hover img{
+    -webkit-filter: brightness(250%);
+    filter: brightness(250%);
+}
+
+.topnav button:active img{
+    -webkit-filter: brightness(250%);
+    filter: brightness(250%);
+}
+
+.topnav button:focus img{
+    -webkit-filter: brightness(250%);
+    filter: brightness(250%);
 }
 
 .topnav-right {
