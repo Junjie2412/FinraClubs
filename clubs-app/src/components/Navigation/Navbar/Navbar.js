@@ -17,7 +17,7 @@ const navbar = (props) => {
                          className={classes.logo}/></button>
             <button>Your Profile</button>
             <button>Notifications</button>
-            <button>Create Group</button>
+            <button>Create Club</button>
 
             <div className={classes["topnav-right"]}>
                 <button>Sign Up</button>
