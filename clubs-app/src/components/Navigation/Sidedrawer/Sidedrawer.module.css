@@ -13,7 +13,6 @@
 }
 
 .sidenav button {
-    width: 100%;
     padding: 6px 6px 6px 6px;
     text-decoration: none;
     font-size: 20px;
@@ -24,12 +23,24 @@
     text-align: left;
 }
 
-.sidenav button:hover {
+.sidenav:nth-child(1){
+    margin: 30px 0 0 0;
+}
+
+.sidenav ul {
+    margin: 0
+}
+
+.sidenav ul li button:hover {
     background-color: #292A3E;
     color: #818181;
 }
 
-.sidenav button.active {
+.sidenav li {
+    list-style-type: none;
+}
+
+.sidenav ul li button.active {
     background-color: #292A3E;
     color: #818181;
     font-weight: bold;
@@ -37,7 +48,7 @@
     border: none;
 }
 
-.sidenav button:focus {
+.sidenav ul li button:focus {
     background-color: #292A3E;
     color: #818181;
     font-weight: bold;
@@ -55,7 +66,7 @@
 .Search{
     font-size: 20px;
     width: 70%;
-    margin: 30px 0 10px -60px;
+    margin: 20px 0 10px -60px;
     border-radius: 10px;
     padding: 10px 0 5px 40px;
     background-color: #4c4e75;
