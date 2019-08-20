@@ -36,6 +36,11 @@
     color: #818181;
 }
 
+.sidenav ul li button:active {
+    background-color: #292A3E;
+    color: #818181;
+    transform: translateY(2px);
+}
 .sidenav li {
     list-style-type: none;
 }

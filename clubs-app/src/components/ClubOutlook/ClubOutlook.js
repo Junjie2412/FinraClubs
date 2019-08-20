@@ -51,12 +51,6 @@ class ClubOutlook extends Component {
     render() {
         return (
             <div className={classes.ClubOutlook}>
-                {/*
-            <img src={club} alt={''}
-                 width={"40%"}
-                 height={"40%"}
-                 className={classes.image}
-            />*/}
                 <div className={classes["slideshow-container"]}>
 
                     <Clubportal

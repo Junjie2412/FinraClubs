@@ -29,10 +29,21 @@
     float: right;
     outline: none;
     border: none;
+    cursor: pointer;
     margin: 20px 50px 0px 0;
     background-color: #3C51B9;
     color: white;
     font-size: 18px;
     padding: 13px 30px 10px 30px;
     border-radius: 10px;
+    box-shadow: 0 2px #300000;
+}
+
+.Header button:hover{
+    filter: brightness(85%);
+}
+
+.Header button:active {
+    filter: brightness(70%);
+    transform: translateY(2px);
 }
