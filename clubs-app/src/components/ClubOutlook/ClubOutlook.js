@@ -4,7 +4,7 @@ import club from '../../assets/club1.jpg'
 
 const ClubOutlook = (props) => {
     return (
-        <div>
+        <div className={""}>
             <img src={club} alt={''}
                  width={"40%"}
                  height={"40%"}
