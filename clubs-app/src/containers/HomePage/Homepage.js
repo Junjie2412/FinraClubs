@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Homepage.module.css';
 import ClubOutlook from '../../components/ClubOutlook/ClubOutlook';
+import EventsOutlook from '../../components/EventsOutlook/EventsOutlook';
 import Subheader from './SubHeader/SubHeader';
 
 const homepage = (props) => {
@@ -12,6 +13,8 @@ const homepage = (props) => {
                 <Subheader buttonText={"Create Club"}>Start your own club, <br/> here at FINRA.</Subheader>
             </div>
             <ClubOutlook/>
+            <div className={classes.v2}></div>
+            <EventsOutlook/>
         </div>
     );
 };

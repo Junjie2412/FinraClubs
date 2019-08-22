@@ -1,16 +1,26 @@
-.ClubPortal{
+.EventsPortal{
     display: inline-block;
     float: left;
     cursor: pointer;
-    margin: 13px 50px 13px 0;
-    width: 42%;
-    height: 325px;
+    margin: 13px 20px 13px 0;
+    width: 90%;
+    height: 150px;
     border-radius: 30px;
-    font-size: 1vw;
     background-color: black;
     position: relative;
     text-align:center;
     vertical-align: top;
+}
+
+.Header {
+    color: white;
+    margin: auto;
+    padding: 10% 0 0 55%;
+    vertical-align: middle;
+    font-size: 1vw;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    text-align: left;
 }
 
 .imageContainer{
@@ -43,38 +53,36 @@
     margin: auto;
 }
 
-.Header {
-    color: white;
+.Time {
+    color: yellow;
     margin: auto;
-    padding: 30% 10% 0 0;
+    padding: 0 23% 0 0;
     vertical-align: middle;
     font-family: 'Open Sans', sans-serif;
-    font-weight: normal;
-}
-
-/**
-Small club portal
- */
-.ClubPortalSmall{
-    display: inline-block;
-    float: left;
-    cursor: pointer;
-    margin: 13px 50px 13px 0;
-    width: 42%;
-    height: 150px;
-    border-radius: 30px;
-    background-color: black;
-    position: relative;
-    text-align:center;
-    vertical-align: top;
-}
-
-.HeaderSmall {
-    color: white;
-    margin: auto;
-    padding: 15% 10% 0 0;
-    vertical-align: middle;
+    font-weight: bold;
     font-size: 1vw;
+}
+
+.day{
+    position: absolute;
+    color: yellow;
+    margin: 2% 0 0 5%;
+    vertical-align: middle;
     font-family: 'Open Sans', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
+    font-size: 4vw;
+    z-index: 20;
+    -webkit-text-stroke: 0.1px greenyellow;
+}
+
+.month{
+    position: absolute;
+    color: white;
+    margin: 20% 0 0 5%;
+    vertical-align: middle;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    z-index: 20;
+    -webkit-text-stroke: 0.1px lightcyan;
 }

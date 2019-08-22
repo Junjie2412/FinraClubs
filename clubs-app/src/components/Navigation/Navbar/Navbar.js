@@ -16,7 +16,6 @@ const navbar = (props) => {
                      alt = ""
                      width={"40px"}
                      height={"40px"}
-                     className={classes.logo}
                 />
             </button>
             <button>Clubs</button>

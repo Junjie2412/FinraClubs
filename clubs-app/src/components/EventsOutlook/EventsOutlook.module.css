@@ -1,11 +1,11 @@
-.ClubOutlook {
+.EventsOutlook {
     box-sizing: border-box;
     font-family: 'DM Serif Display', serif;
     margin: 0 0 0 0;
-    width: 65%;
+    width: 33%;
     height: 700px;
     vertical-align: top;
-    padding: 2% 0 0 5%;
+    padding: 2% 0 0 2%;
     display: inline-block;
     float: left;
 }
@@ -15,7 +15,7 @@
     font-weight: normal;
     font-size: 28px;
     padding: 0;
-    margin: 0 0 20px 0;
     width: 100%;
     text-align: left;
+    margin: 0 0 20px 0;
 }
