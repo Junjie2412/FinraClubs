@@ -1,0 +1,31 @@
+.subHeader {
+    display: inline-block;
+    margin: 0 4% 0 4%;
+    width: 30%;
+    height: inherit;
+    background-color: blue;
+    vertical-align:top;
+}
+
+.HeaderText {
+    align-self: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'DM Serif Display', serif;
+    font-weight: normal;
+    padding: 0;
+    margin: 10% 0 0 0;
+}
+
+
+.Button {
+    width: 30%;
+    height: 12%;
+    border-radius: 25px;
+    border: none;
+    background-color: yellow;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}

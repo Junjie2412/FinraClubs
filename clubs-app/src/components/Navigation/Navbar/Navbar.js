@@ -9,23 +9,26 @@ const navbar = (props) => {
 
     return (
 
+
         <nav className={classes.topnav}>
             <button>
-                <NavLink to={""}>
-                    <img src = {logo}
-                         alt = ""
-                         width={"40px"}
-                         height={"40px"}
-                         className={classes.logo}
-                    />
-                </NavLink>
+                <img src = {logo}
+                     alt = ""
+                     width={"40px"}
+                     height={"40px"}
+                     className={classes.logo}
+                />
             </button>
-            <button>Your Profile</button>
-            <button>Notifications</button>
-            <button>Create Club</button>
+            <button>Clubs</button>
 
             <div className={classes["topnav-right"]}>
-                <button>Sign Up</button>
+                <button>User Name</button>
+                <button>
+                    <i className={"fas fa-user-circle"}></i>
+                </button>
+                <button>
+                    <i className="fas fa-chevron-down"></i>
+                </button>
             </div>
         </nav>
 

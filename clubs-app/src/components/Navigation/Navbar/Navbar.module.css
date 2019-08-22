@@ -1,59 +1,44 @@
 .topnav {
     overflow: hidden;
-    background-color: white;
-    height: 60px;
+    background-color: black;
+    height: 80px;
     width: 100%;
     position: fixed;
     z-index: 10;
+}
+
+.topnav img{
+    margin: 10px 10px 0 30px;
+    filter: brightness(80%) sepia(100%) saturate(1000%);
 }
 
 .topnav button {
     float: left;
     text-align: center;
     text-decoration: none;
-    padding: 10px 20px;
-    font-size: 20px;
+    font-size: 40px;
     background-color: inherit;
     border: none;
-    font-weight: bold;
+    font-weight: normal;
     height: 100%;
-}
-
-.topnav button:hover {
-    background-color: #292A3E;
     color: white;
-}
-
-.topnav button.active {
-    background-color: #292A3E;
-    color: white;
-    outline: none;
-    border: none;
-}
-
-.topnav button:focus {
-    background-color: #292A3E;
-    color: white;
-    outline: none;
-    border: none;
-}
-
-.topnav button:hover img{
-    -webkit-filter: brightness(250%);
-    filter: brightness(250%);
-}
-
-.topnav button:active img{
-    -webkit-filter: brightness(250%);
-    filter: brightness(250%);
-}
-
-.topnav button:focus img{
-    -webkit-filter: brightness(250%);
-    filter: brightness(250%);
+    font-family: 'DM Serif Display', serif;
 }
 
 .topnav-right {
     float: right;
     height: 60px;
+}
+.topnav-right button {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.topnav-right button {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.topnav-right:nth-child(3) {
+    margin-right: 40px;
 }

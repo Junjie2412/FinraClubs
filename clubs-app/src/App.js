@@ -5,6 +5,7 @@ import Navbar from './components/Navigation/Navbar/Navbar';
 import Homepage from './containers/HomePage/Homepage';
 import Clubpage from './containers/ClubPage/ClubPage';
 import Sidedrawer from './components/Navigation/Sidedrawer/Sidedrawer';
+import Preview from './components/Preview/Preview';
 
 function App() {
 
@@ -12,11 +13,13 @@ function App() {
 
   return (
     <div className="App">
-        <Navbar></Navbar>
-        <Sidedrawer/>
         <Switch>
-            <Route path="/clubpage" exact component={Clubpage}/>
-            <Route path="" component={Homepage}/>
+            <Route path="/home" exact component={Navbar}/>
+        </Switch>
+
+        <Switch>
+            <Route path="/preview" exact component={Preview}/>
+            <Route path="/home" exact component={Homepage}/>
             <Redirect to=""/>
         </Switch>
     </div>
