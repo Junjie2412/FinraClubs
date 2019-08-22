@@ -1,9 +1,9 @@
 .subHeader {
     display: inline-block;
-    margin: 0 4% 0 4%;
-    width: 30%;
+    margin: 0 4.9% 0 4.9%;
+    width: 40%;
     height: inherit;
-    background-color: blue;
+    background-color: transparent;
     vertical-align:top;
 }
 
@@ -13,8 +13,9 @@
     font-size: 50px;
     font-family: 'DM Serif Display', serif;
     font-weight: normal;
+    line-height: 45px;
     padding: 0;
-    margin: 10% 0 0 0;
+    margin: 20% 0 4% 0;
 }
 
 
@@ -28,4 +29,14 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: 14px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .HeaderText{
+        font-size: 40px
+    }
+
+    .Button{
+        width: 100px;
+    }
 }

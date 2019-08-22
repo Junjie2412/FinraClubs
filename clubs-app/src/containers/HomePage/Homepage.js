@@ -11,6 +11,7 @@ const homepage = (props) => {
                 <div className={classes.vl}></div>
                 <Subheader buttonText={"Create Club"}>Start your own club, <br/> here at FINRA.</Subheader>
             </div>
+            <ClubOutlook/>
         </div>
     );
 };
