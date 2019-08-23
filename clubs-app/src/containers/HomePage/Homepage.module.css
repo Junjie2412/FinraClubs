@@ -29,10 +29,10 @@
 .v2 {
     float: left;
     display: inline-block;
-    border-left: 2px solid lightgrey;
-    height: 500px;
+    border-left: 2px solid #F0F0F0;
+    height: 300px;
 
-    margin: 90px 0 0 0;
+    margin: 200px 0 0 0;
     width: 0;
     z-index: 10;
     vertical-align:top;

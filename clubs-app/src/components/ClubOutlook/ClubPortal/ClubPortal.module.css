@@ -2,8 +2,8 @@
     display: inline-block;
     float: left;
     cursor: pointer;
-    margin: 13px 50px 13px 0;
-    width: 42%;
+    margin: 13px 4.5% 13px 4.5%;
+    width: 41%;
     height: 325px;
     border-radius: 30px;
     font-size: 1vw;
@@ -59,8 +59,8 @@ Small club portal
     display: inline-block;
     float: left;
     cursor: pointer;
-    margin: 13px 50px 13px 0;
-    width: 42%;
+    margin: 13px 4.5% 13px 4.5%;
+    width: 41%;
     height: 150px;
     border-radius: 30px;
     background-color: black;

@@ -25,13 +25,13 @@ class Auth extends Component {
                     <input type={"password"} placeholder={"Password"} className={[classes.Input, classes.InputPassword].join(' ')}/>
                     <input type={"checkbox"} className={classes.Check}/>
                     <p className={classes.Certify}>By checking this box I certify that I have read, understood, and accepted the
-                        <a href={'http://www.finra.org/finra-website-privacy-policy'}> terms and confitions of use</a></p>
+                        <a href={'http://www.finra.org/finra-website-privacy-policy'} target={"_blank"}> terms and conditions of use</a></p>
                     <NavLink to={"/home"} style={{"text-decoration": "none"}}>
                         <button className={classes.Button}>
                             Log In
                         </button>
                     </NavLink>
-                    <a href={''} style={{"display": "block"}}>Forgot user email or password?</a>
+                    <a href={'/'} style={{"display": "block"}}>Forgot user email or password?</a>
                     <div className={classes.Divider}/>
                     <div className={classes.Or}>Or</div>
                     <div className={classes.Divider}/>

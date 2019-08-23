@@ -7,6 +7,15 @@
     vertical-align:top;
 }
 
+.subHeaderFull {
+    display: inline-block;
+    margin: 0 4.9% 0 4.9%;
+    width: 100%;
+    height: inherit;
+    background-color: transparent;
+    vertical-align:top;
+}
+
 .HeaderText {
     align-self: center;
     color: white;
@@ -20,7 +29,7 @@
 
 
 .Button {
-    width: 30%;
+    width: 230px;
     height: 12%;
     border-radius: 25px;
     border: none;
@@ -29,6 +38,13 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+.Button:active {
+    background-color: yellowgreen;
+    transform: translateY(4px);
+    outline: none;
 }
 
 @media only screen and (max-width: 1000px) {

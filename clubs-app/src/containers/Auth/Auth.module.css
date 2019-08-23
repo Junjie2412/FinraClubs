@@ -72,7 +72,7 @@
 }
 
 .Certify{
-    margin-top: 20px;
+    margin-top: 40px;
     display: inline-block;
     width: 50%;
     font-size: 14px;
@@ -83,7 +83,7 @@
     cursor: pointer;
     display: block;
     width: 70%;
-    height: 10%;
+    height: 8%;
     margin: 5% 0 2% 15%;
     border-radius: 50px;
     border: none;
@@ -92,6 +92,17 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: 14px;
+    outline: none;
+}
+
+.Button:focus{
+    outline: none;
+}
+
+.Button:active {
+    background-color: yellowgreen;
+    transform: translateY(4px);
+    outline: none;
 }
 
 .Or {

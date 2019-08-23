@@ -3,7 +3,7 @@ import classes from './SubHeader.module.css';
 
 const subheader = (props) => {
     return (
-            <div className={classes.subHeader}>
+            <div className={props.full ? classes.subHeaderFull : classes.subHeader}>
                 <h1 className={classes.HeaderText}>
                     {props.children}
                 </h1>

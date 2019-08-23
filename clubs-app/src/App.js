@@ -4,8 +4,7 @@ import {Route, Switch, Redirect} from 'react-router-dom';
 import Navbar from './components/Navigation/Navbar/Navbar';
 import Homepage from './containers/HomePage/Homepage';
 import Auth from './containers/Auth/Auth';
-import Clubpage from './containers/ClubPage/ClubPage';
-import Sidedrawer from './components/Navigation/Sidedrawer/Sidedrawer';
+//import Clubpage from './containers/ClubPage/ClubPage';
 import Preview from './components/Preview/Preview';
 import LoginPreview from './components/Preview/LoginPreview';
 

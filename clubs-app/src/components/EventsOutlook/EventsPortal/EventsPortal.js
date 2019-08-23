@@ -9,7 +9,7 @@ const EventsPortal = (props) => {
             <h1 className={classes.day}>{props.day}</h1>
             <h1 className={classes.month}>{props.month}</h1>
             <div className={classes.imageContainer}>
-                <img className={classes.image} src={props.image}/>
+                <img className={classes.image} alt={''} src={props.image}/>
             </div>
             <h3 className={classes.Header}>
                 {props.name}

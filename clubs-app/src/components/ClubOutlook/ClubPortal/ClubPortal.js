@@ -7,7 +7,7 @@ const ClubPortal = (props) => {
     return (
         <div className={props.small ? classes.ClubPortalSmall : classes.ClubPortal}>
             <div className={classes.imageContainer}>
-                <img className={classes.image} src={props.image}/>
+                <img className={classes.image} alt={''} src={props.image}/>
             </div>
             <h3 className={props.small ? classes.HeaderSmall : classes.Header}>
                 {props.name}
