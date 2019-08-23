@@ -16,7 +16,7 @@ const homepage = (props) => {
             <ClubOutlook/>
             <div className={classes.v2}></div>
             <EventsOutlook/>
-            <SearchFooter header={"Categories"}/>
+            <SearchFooter header={"Categories"} small/>
         </div>
     );
 };
