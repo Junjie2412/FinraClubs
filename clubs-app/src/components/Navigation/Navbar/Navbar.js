@@ -21,6 +21,8 @@ const navbar = (props) => {
             <button>Clubs</button>
 
             <div className={classes["topnav-right"]}>
+                <i className={["fa fa-search", classes.searchButton].join(' ')}></i>
+                <input type={"text"} placeholder={'Search for your tribe'}/>
                 <button>User Name</button>
                 <button>
                     <i className={"fas fa-user-circle"}></i>

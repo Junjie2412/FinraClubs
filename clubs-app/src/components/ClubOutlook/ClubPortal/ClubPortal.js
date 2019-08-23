@@ -1,18 +1,29 @@
 import React from 'react';
 import classes from './ClubPortal.module.css';
+import {NavLink} from 'react-router-dom';
 
-const ClubPortal = (props) => {
+const ClubPortal = (props, context) => {
 
     //non members - see apply and the top div
     return (
-        <div className={props.small ? classes.ClubPortalSmall : classes.ClubPortal}>
-            <div className={classes.imageContainer}>
-                <img className={classes.image} alt={''} src={props.image}/>
+        <NavLink to={"/clubpage/"+props.name}>
+            <div className={props.small ? classes.ClubPortalSmall : classes.ClubPortal}>
+                {/*}
+                <div className={classes.overlay}>
+                    <NavLink to={"/clubpage/"+props.name} className={classes.overlayLink}>
+                        <button className={classes.overlayButton}>
+                            Go!
+                        </button>
+                    </NavLink>
+                </div>*/}
+                <div className={classes.imageContainer}>
+                    <img className={classes.image} alt={''} src={props.image}/>
+                </div>
+                <h3 className={props.small ? classes.HeaderSmall : classes.Header}>
+                    {props.name}
+                </h3>
             </div>
-            <h3 className={props.small ? classes.HeaderSmall : classes.Header}>
-                {props.name}
-            </h3>
-        </div>
+        </NavLink>
     )
 };
 

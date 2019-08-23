@@ -1,49 +1,8 @@
-.row {
-    margin-top: 60px;
-    margin-left: 300px;
-    height: 100%;
-    width: calc(100% - 300px);
-    background-color: #292A3E;
-    position: fixed;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.Header {
+.Clubpage {
+    margin-top: 80px;
     width: 100%;
-}
-
-.Header h1 {
-    float: left;
-    color: white;
-    margin: 20px 0 0 50px;
-    font-size: 30px;
-}
-
-.Header button {
-    float: right;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    margin: 20px 50px 0px 0;
-    background-color: #3C51B9;
-    color: white;
-    font-size: 18px;
-    padding: 13px 30px 10px 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px #300000;
-}
-
-.Header button:hover{
-    filter: brightness(85%);
-}
-
-.Header button:active {
-    filter: brightness(70%);
-    transform: translateY(2px);
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    overflow-y: auto;
 }

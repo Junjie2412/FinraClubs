@@ -1,5 +1,6 @@
 .ClubPortal{
     display: inline-block;
+    box-sizing: border-box;
     float: left;
     cursor: pointer;
     margin: 13px 4.5% 13px 4.5%;
@@ -11,6 +12,17 @@
     position: relative;
     text-align:center;
     vertical-align: top;
+    overflow: hidden;
+    box-shadow: 4px 4px 8px gray;
+}
+
+.ClubPortal:hover .overlay{
+    background-color: rgba(255, 255, 255, .7);
+    transform: translateX(0);
+}
+
+.ClubPortal:hover .overlayButton{
+    background-color: rgba(255, 255, 0, 1);
 }
 
 .imageContainer{
@@ -52,6 +64,51 @@
     font-weight: normal;
 }
 
+.overlay{
+    cursor: auto;
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    transform: translateY(-100%);
+    transition-duration: 0.1s;
+}
+
+.overlayButton {
+    pointer-events: all !important;
+    opacity: 1;
+    cursor: pointer;
+    width: 20%;
+    height: 40px;
+    margin: auto;
+    border-radius: 50px;
+    border: none;
+    background-color: rgba(255, 255, 0, 0);
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    outline: none;
+}
+
+.overlayButton:focus{
+    outline: none;
+}
+
+.overlayButton:active {
+    background-color: yellowgreen;
+    transform: translateY(4px);
+    outline: none;
+}
+
+.overlayLink{
+    top: 40%;
+    position: relative;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
 /**
 Small club portal
  */
@@ -67,12 +124,23 @@ Small club portal
     position: relative;
     text-align:center;
     vertical-align: top;
+    overflow: hidden;
+    box-shadow: 4px 4px 8px gray;
+}
+
+.ClubPortalSmall:hover .overlay{
+    background-color: rgba(255, 255, 255, .7);
+    transform: translateX(0);
+}
+
+.ClubPortalSmall:hover .overlayButton{
+    background-color: rgba(255, 255, 0, 1);
 }
 
 .HeaderSmall {
     color: white;
     margin: auto;
-    padding: 15% 10% 0 0;
+    padding: 12% 10% 0 0;
     vertical-align: middle;
     font-size: 1vw;
     font-family: 'Open Sans', sans-serif;
