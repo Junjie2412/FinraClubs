@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from './SearchFooter.module.css';
 import Clubportal from "../ClubOutlook/ClubPortal/ClubPortal";
-import club0 from '../../assets/club0.jpg';
-import club1 from '../../assets/club1.jpg';
-import club2 from '../../assets/club3.jpg';
+import club0 from '../../assets/club0Book.jpg';
+import club1 from '../../assets/club1Dance.jpg';
+import club2 from '../../assets/club3Finance.jpg';
 
 const SearchFooter = (props) => {
 

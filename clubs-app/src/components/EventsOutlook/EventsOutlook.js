@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import classes from './EventsOutlook.module.css';
 import Eventsportal from './EventsPortal/EventsPortal';
-import club0 from '../../assets/club0.jpg'
-import club1 from '../../assets/club1.jpg'
-import club2 from '../../assets/club2.jpg'
+import club0 from '../../assets/club0Book.jpg'
+import club1 from '../../assets/club1Dance.jpg'
+import club2 from '../../assets/club2Astrology.jpg'
 
 class EventsOutlook extends Component {
 

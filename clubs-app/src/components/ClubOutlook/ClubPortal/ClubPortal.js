@@ -6,7 +6,7 @@ const ClubPortal = (props, context) => {
 
     //non members - see apply and the top div
     return (
-        <NavLink to={"/clubpage/"+props.name} style={{"pointer-events":props.disable ? "none" : ""}}>
+        <NavLink to={"/clubpage/"+props.name} style={{pointerEvents:props.disable ? "none" : ""}}>
             <div className={[props.small ? classes.ClubPortalSmall : classes.ClubPortal,props.full ? classes.Full: ""].join(" ")}>
                 {/*
                 <div className={classes.overlay}>
