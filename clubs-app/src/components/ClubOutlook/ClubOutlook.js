@@ -13,7 +13,7 @@ class ClubOutlook extends Component {
         return (
             <div className={classes.ClubOutlook}>
                 <h1 className={classes.Header}>Featured Clubs</h1>
-                <Clubportal image={club0} name={"Book Club"}/>
+                <Clubportal image={club0} name={"Book Club"} />
                 <Clubportal image={club1} name={"Dance Group"} small/>
                 <Clubportal image={club2} name={"Astrology Society"} small/>
                 <Clubportal image={club3} name={"Finance Association"} small/>
