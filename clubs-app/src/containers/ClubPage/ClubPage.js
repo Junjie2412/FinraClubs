@@ -1,40 +1,57 @@
 import React from 'react';
 import classes from './ClubPage.module.css';
-import club0 from '../../assets/club0Book.jpg'
 import ClubDirectory from './ClubDirectory/ClubDirectory';
-//import club0 from '../../assets/club0 Book.jpg'
-import club1 from '../../assets/club1Dance.jpg'
-import club2 from '../../assets/club2Astrology.jpg'
-import club3 from '../../assets/club3Finance.jpg'
-import club4 from '../../assets/club4Group.jpg'
+import EventHub from './EventHub/EventHub';
+import PeopleList from "../../components/PeopleList/PeopleList";
 import SearchFooter from "../../components/SearchFooter/SearchFooter";
+import {NavLink} from "react-router-dom";
+import peoplegoing from '../../assets/PeopleGoing.png';
+import clubroster from '../../assets/ClubRoster.png';
+import {clubs, events} from '../../shared/data'
 
 const Clubpage = (props) => {
 
     let getPicture = () => {
-        console.log(props.match.params.clubname);
-        console.log(props.match.params.clubname === "Book Club")
-        switch(props.match.params.clubname){
-            case "Book Club": return club0;
-            case "Dance Group": return club1;
-            case "Astrology Society": return club2
-            case "Finance Association": return club3;
-            case "Adventuring Crew": return club4;
-            default: return '';
-        }
+        var found = clubs.find(function(element) {
+            return element.clubName === props.match.params.clubname;
+        });
+        return found.image;
     };
 
-    console.log(getPicture());
+    let getEvent = () => {
+        console.log(props.match.params.clubname);
+        console.log(props.match.params.eventname);
+        console.log(events);
+        var found = events.find(function(element) {
+            return element.clubName === props.match.params.clubname && element.eventName === props.match.params.eventname;
+        });
+        console.log(found);
+        return found;
+    };
+
+    let view = (props.match.params.eventname ? <EventHub eventname={props.match.params.eventname} month={getEvent().month} day={getEvent().day} time={getEvent().time}/>:
+        <ClubDirectory clubname={props.match.params.clubname}/>);
 
     return (
         <div className={classes.Clubpage}>
-            <h1 className={classes.Title}>{props.match.params.clubname}</h1>
+            <NavLink to={"/clubpage/"+props.match.params.clubname} style={{pointerEvents:props.disable ? "none" : ""}}>
+                <h1 className={classes.Title}>{props.match.params.clubname}</h1>
+            </NavLink>
             <button className={classes.Button}>Join</button>
             <div className={classes.Header}>
                 <img className={classes.image} src={getPicture()} alt={''}/>
             </div>
-            <ClubDirectory/>
-            <SearchFooter/>
+            {view}
+            <PeopleList header={props.match.params.eventname ? "People Going" : "Members"}
+                        image={props.match.params.eventname ? peoplegoing : clubroster}
+                        people={
+                [
+                    {name : "Tom Sawyer"},
+                    {name : "Rose Ann"},
+                    {name : "Joanne Twine"}
+                    ]
+            }/>
+            <SearchFooter header = "Suggested Clubs"/>
         </div>
     )
 };

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import classes from './Auth.module.css';
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/ClubLogoGREEN.png";
 
 class Auth extends Component {
 
@@ -26,7 +26,7 @@ class Auth extends Component {
                     <input type={"checkbox"} className={classes.Check}/>
                     <p className={classes.Certify}>By checking this box I certify that I have read, understood, and accepted the
                         <a href={'http://www.finra.org/finra-website-privacy-policy'} target={"_blank"}> terms and conditions of use</a></p>
-                    <NavLink to={"/home"} style={{"text-decoration": "none"}}>
+                    <NavLink to={"/home"} style={{textDecoration: "none"}}>
                         <button className={classes.Button}>
                             Log In
                         </button>

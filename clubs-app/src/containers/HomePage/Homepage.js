@@ -9,14 +9,12 @@ const homepage = (props) => {
     return (
         <div className={classes.Homepage}>
             <div className={classes.Header}>
-                <SubHeader buttonText={"Sign Up"}>Find your tribe, <br/> here at FINRA.</SubHeader>
-                <div className={classes.vl}></div>
-                <SubHeader buttonText={"Create Club"}>Start your own club, <br/> here at FINRA.</SubHeader>
+                <SubHeader full>Welcome to Clubs</SubHeader>
             </div>
             <ClubOutlook/>
             <div className={classes.v2}></div>
             <EventsOutlook/>
-            <SearchFooter header={"Categories"} small/>
+            <SearchFooter header={"Categories"} search placeholder={"Search by Category"}/>
         </div>
     );
 };

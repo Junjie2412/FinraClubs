@@ -1,15 +1,17 @@
 .Homepage {
     margin-top: 80px;
     width: 100%;
+
     height: 100%;
     background-color: white;
     position: fixed;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .Header {
     width: 100%;
-    height: 400px;
+    height: 350px;
     /*background-color: #818181;*/
     background-image: url('../../assets/HeaderImage.png');
     background-size: 100%;

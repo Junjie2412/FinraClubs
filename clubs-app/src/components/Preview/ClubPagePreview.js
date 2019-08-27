@@ -1,5 +1,5 @@
 import React from 'react';
-import preview from '../../assets/Event Page.png';
+import preview from '../../assets/EventPage.png';
 
 const ClubPreview = (props) => {
 

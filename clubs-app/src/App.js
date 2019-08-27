@@ -18,6 +18,7 @@ function App() {
     <div className="App">
         <Switch>
             <Route path="/home" exact component={Navbar}/>
+            <Route path={"/clubpage/:clubname/:eventname"} component={Navbar}/>
             <Route path="/clubpage/:clubname" component={Navbar}/>
             <Route path={"/events"} component={Navbar}/>
         </Switch>
@@ -27,8 +28,9 @@ function App() {
             <Route path="/authpreview" exact component={LoginPreview}/>
             <Route path="/clubpreview" exact component={ClubPreview}/>
             <Route path="/home" exact component={Homepage}/>
+            <Route path={"/clubpage/:clubname/:eventname"} component={Clubpage}/>
             <Route path="/clubpage/:clubname" component={Clubpage}/>
-            <Route path={"/events"} component={Events}/>
+            <Route path="/events" component={Events}/>
             <Route path="/" exact component={Auth}/>
             <Redirect to=""/>
         </Switch>

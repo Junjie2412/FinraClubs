@@ -88,7 +88,7 @@
 }*/
 
 .Time {
-    color: yellow;
+    color: #9EE000;
     margin: auto;
     padding: 0 23% 0 0;
     vertical-align: middle;
@@ -99,7 +99,7 @@
 
 .day{
     position: absolute;
-    color: yellow;
+    color: #9EE000;
     margin: 2% 0 0 5%;
     vertical-align: middle;
     font-family: 'Open Sans', sans-serif;

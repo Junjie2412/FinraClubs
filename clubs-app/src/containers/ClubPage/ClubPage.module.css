@@ -5,6 +5,7 @@
     background-color: white;
     position: fixed;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .Title {
@@ -14,6 +15,7 @@
     z-index: 30;
     font-family: 'DM Serif Display', serif;
     font-size: 64px;
+    font-weight: normal;
 }
 
 .Header {
@@ -51,7 +53,7 @@
     height: 6%;
     border-radius: 30px;
     border: none;
-    background-color: yellow;
+    background-color: #9EE000;
     color: black;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
@@ -60,7 +62,7 @@
     outline: none;
     position: absolute;
     z-index: 30;
-    margin: 200px 0% 0 -40%;
+    margin: 200px 0 0 -40%;
 }
 
 .Button:active {

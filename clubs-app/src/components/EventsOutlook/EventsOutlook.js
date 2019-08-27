@@ -1,19 +1,19 @@
 import React, {Component} from 'react';
 import classes from './EventsOutlook.module.css';
 import Eventsportal from './EventsPortal/EventsPortal';
-import club0 from '../../assets/club0Book.jpg'
-import club1 from '../../assets/club1Dance.jpg'
-import club2 from '../../assets/club2Astrology.jpg'
+import {events} from '../../shared/data';
 
 class EventsOutlook extends Component {
 
     render() {
+
+        const eventsList = events.slice(3, 6).map(event => (
+            <Eventsportal image={event.image} name={event.eventName} time={event.time} clubname = {event.clubName} day={event.day} month={event.month}/>
+        ));
         return (
             <div className={classes.EventsOutlook}>
                 <h1 className={classes.Header}>Upcoming Events</h1>
-                <Eventsportal image={club0} name={"Reading Night"} time={"6:30 PM"} day={11} month={"August"}/>
-                <Eventsportal image={club1} name={"Dance Rehearse"} time={"6:30 PM"} day={27} month={"September"}/>
-                <Eventsportal image={club2} name={"Horoscopes"} time={"6:30 PM"} day={"01"} month={"April"}/>
+                {eventsList}
             </div>
         )
     }

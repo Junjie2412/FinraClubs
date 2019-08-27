@@ -7,9 +7,13 @@
     border-radius: 0 30px 0 0;
     z-index: 10;
     margin: -6% 0 0 0;
-    padding: 3% 0 0 10%;
+    padding: 3% 0 0 6%;
     position: relative;
+    vertical-align: top;
+    display: inline-block;
     background-color: white;
+    float: left;
+
 }
 
 .Tabs{
@@ -25,18 +29,22 @@
     border: none;
     font-size: 28px;
     margin: 0 3% 0 0;
-    padding-bottom: 0.5%;
 
 }
 
 .Tabs button:active, .Tabs  button:focus {
-    border-bottom: 10px solid yellow;
+    border-bottom: 10px solid #9EE000;
 }
 
 .line {
     width: 89%;
     height: 1px;
-    margin: 0.8% 0 0 0;
-    background-color: gray;
+    margin: 0.4% 0 0 0;
+    background-color: lightgray;
     display: block;
+}
+
+.image {
+    display: inline-block;
+    max-width: 33%;
 }

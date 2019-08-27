@@ -1,0 +1,109 @@
+.EventHub{
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    width: 66%;
+    height: 1000px;
+    border-radius: 0 30px 0 0;
+    z-index: 10;
+    margin: -6% 0 0 0;
+    padding: 3% 0 0 6%;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    background-color: white;
+    float: left;
+}
+
+.date{
+    width: 20%;
+    display: inline-block;
+    text-align: left;
+    margin: 0 0 0 0;
+}
+
+.event {
+    width: 80%;
+    display: inline-block;
+    text-align: left;
+    margin: 0 0 3% 0;
+}
+
+.eventName{
+    font-size: 55px;
+    font-weight: normal;
+    font-family: 'DM Serif Display', serif;
+    margin: 0 0 0 0;
+}
+
+.Header {
+    font-family: 'DM Serif Display', serif;
+    text-align: left;
+    width: 100%;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.about {
+    text-align: left;
+    white-space: pre-line;
+    max-width: 89%;
+}
+
+.line {
+    width: 89%;
+    height: 1px;
+    margin: 0.4% 0 0 0;
+    background-color: lightgray;
+    display: block;
+}
+
+.Button {
+    width: 230px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background-color: #9EE000;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    z-index: 30;
+    margin-bottom: 0;
+}
+
+.Button:active {
+    background-color: yellowgreen;
+    transform: translateY(4px);
+    outline: none;
+}
+
+
+.Time {
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 1.5vw;
+    margin: 0 0 0 0;
+}
+
+.day{
+    color: #9EE000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 4vw;
+    z-index: 20;
+    margin: 0 0 0 0;
+}
+
+.month{
+    color: black;
+    vertical-align: middle;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    z-index: 20;
+    margin: 0 0 0 0;
+}

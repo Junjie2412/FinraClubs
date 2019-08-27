@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import logo from '../../../assets/logo.jpg';
+import logo from '../../../assets/ClubLogoGREEN.png';
 import classes from './Navbar.module.css';
 
 const navbar = (props) => {
@@ -23,11 +23,17 @@ const navbar = (props) => {
                     <i className={["fa fa-search", classes.searchButton].join(' ')}></i>
                     <input type={"text"} placeholder={'Search for your tribe'}/>
 
+                <button className={classes.createClubButton}>
+                    Create Club
+                </button>
                 <NavLink to={"/Events"}>
                     <button style={{marginRight: "40px", marginLeft: "40px"}}>
                         Events
                     </button>
                 </NavLink>
+                <button className={classes.bell}>
+                    <i className="far fa-bell"></i>
+                </button>
                 <button>User Name</button>
                 <button>
                     <i className={"fas fa-user-circle"}></i>

@@ -9,7 +9,6 @@
 
 .topnav img{
     margin: 10px 10px 0 30px;
-    filter: brightness(80%) sepia(100%) saturate(1000%);
 }
 
 .topnav button {
@@ -23,6 +22,7 @@
     height: 100%;
     color: white;
     font-family: 'DM Serif Display', serif;
+    outline: none;
 }
 
 .topnav input {
@@ -50,10 +50,12 @@
 .topnav-right {
     float: right;
     height: 60px;
+    margin-right: 20px;
 }
 .topnav-right button {
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
+    outline: none;
 }
 
 .topnav-right button {
@@ -65,6 +67,10 @@
     margin-right: 40px;
 }
 
+.bell {
+    margin: 0 0 0 40px;
+}
+
 @media only screen and (max-width: 1000px){
     .topnav input {
         width: 100px;
@@ -72,4 +78,19 @@
     .searchButton {
         left: 125px
     }
+}
+
+.createClubButton {
+    background-color: #9EE000 !important;
+    color: black !important;
+    font-weight: bold !important;
+    border-radius: 30px;
+    height: 40px !important;
+    width: 240px !important;
+    margin: 12px 40px 0 60px !important;
+}
+
+.createClubButton:active {
+    background-color: yellowgreen !important;
+    transform: translateY(4px);
 }

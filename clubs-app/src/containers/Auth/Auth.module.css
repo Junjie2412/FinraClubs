@@ -25,7 +25,6 @@
 .logo {
     display: inline-block;
     margin: 10px 10px 0 0;
-    filter: brightness(80%) sepia(100%) saturate(1000%);
 }
 
 .LoginHeader{
@@ -87,7 +86,7 @@
     margin: 5% 0 2% 15%;
     border-radius: 50px;
     border: none;
-    background-color: yellow;
+    background-color: #9EE000;
     color: black;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
