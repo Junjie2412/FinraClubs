@@ -6,6 +6,7 @@ import logo from "../../assets/ClubLogoGREEN.png";
 class Auth extends Component {
 
     render() {
+
         return (
             <div className={classes.Auth}>
                 <h1 className={classes.Header}>
@@ -26,7 +27,7 @@ class Auth extends Component {
                     <input type={"checkbox"} className={classes.Check}/>
                     <p className={classes.Certify}>By checking this box I certify that I have read, understood, and accepted the
                         <a href={'http://www.finra.org/finra-website-privacy-policy'} target={"_blank"}> terms and conditions of use</a></p>
-                    <NavLink to={"/home"} style={{textDecoration: "none"}}>
+                    <NavLink to={"/home"} style={{textDecoration: "none"}} onClick={() => localStorage.setItem('interest', true)}>
                         <button className={classes.Button}>
                             Log In
                         </button>
@@ -35,9 +36,11 @@ class Auth extends Component {
                     <div className={classes.Divider}/>
                     <div className={classes.Or}>Or</div>
                     <div className={classes.Divider}/>
-                    <button className={classes.Button}>
-                        Sign Up
-                    </button>
+                    <NavLink to={"/home"} style={{textDecoration: "none"}}>
+                        <button className={classes.Button} onClick={() => localStorage.setItem('interest', true)}>
+                            Sign Up
+                        </button>
+                    </NavLink>
                 </div>
             </div>
         )

@@ -8,7 +8,7 @@ class EventsOutlook extends Component {
     render() {
 
         const eventsList = events.slice(3, 6).map(event => (
-            <Eventsportal image={event.image} name={event.eventName} time={event.time} clubname = {event.clubName} day={event.day} month={event.month}/>
+            <Eventsportal key={event.eventName} image={event.image} name={event.eventName} time={event.time} clubname = {event.clubName} day={event.day} month={event.month}/>
         ));
         return (
             <div className={classes.EventsOutlook}>

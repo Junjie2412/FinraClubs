@@ -8,7 +8,7 @@ class ClubOutlook extends Component {
     render() {
 
         let clubsList = clubs.map(club => (
-            <Clubportal key={club.clubname} image={club.image} name={club.clubName} small={clubs.indexOf(club) !== 0}/>
+            <Clubportal key={club.clubName} image={club.image} name={club.clubName} small={clubs.indexOf(club) !== 0}/>
         ));
 
         return (
