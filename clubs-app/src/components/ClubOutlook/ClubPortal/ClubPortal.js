@@ -8,19 +8,10 @@ const ClubPortal = (props, context) => {
     return (
         <NavLink to={"/clubpage/"+props.name} style={{pointerEvents:props.disable ? "none" : ""}}>
             <div className={[props.small ? classes.ClubPortalSmall : classes.ClubPortal,props.full ? classes.Full: ""].join(" ")}>
-                {/*
-                <div className={classes.overlay}>
-                    <NavLink to={"/clubpage/"+props.name} className={classes.overlayLink}>
-                        <button className={classes.overlayButton}>
-                            Go!
-                        </button>
-                    </NavLink>
-                </div>*/}
                 <div className={classes.imageContainer}>
                     <img className={classes.image} alt={''} src={props.image}/>
                 </div>
-                <h3 className={[props.small ? classes.HeaderSmall : classes.Header,
-                                props.full ? classes.HeaderFull: ""].join(' ')}>
+                <h3 className={[props.small ? classes.HeaderSmall : classes.Header].join(' ')}>
                     {props.name}
                 </h3>
             </div>
