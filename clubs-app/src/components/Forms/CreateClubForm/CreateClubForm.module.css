@@ -1,0 +1,61 @@
+.Header {
+    font-family: 'DM Serif Display', serif;
+    text-align: left;
+    width: 100%;
+    font-weight: normal;
+}
+
+.buttonGroup {
+    width: 100%;
+}
+
+.buttonGroup button {
+    width: 20%;
+}
+
+.buttonGroup button:active{
+    transform: translateY(4px);
+}
+
+.buttonGroup button:focus {
+    outline: none;
+}
+
+.leftButton {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 30px;
+    float: left;
+    border: 1px solid #9EE000;
+}
+
+.rightButton {
+    float: right;
+    background-color: #9EE000;
+    color: black;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+}
+
+.Progress {
+    margin: 20px 0 20px 0;
+}
+
+.formGroup {
+    width: 70%;
+}
+
+.formLabel {
+    font-weight: bold;
+}
+
+.Input {
+    margin: 20px 0 40px 0;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    outline: none;
+}

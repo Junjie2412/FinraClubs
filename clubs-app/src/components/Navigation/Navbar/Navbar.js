@@ -2,14 +2,17 @@ import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import logo from '../../../assets/ClubLogoGREEN.png';
 import classes from './Navbar.module.css';
-import {clubs} from '../../../shared/data'
-import {events} from '../../../shared/data'
+import {clubs} from '../../../shared/data';
+import {events} from '../../../shared/data';
+import CreateClubForm from '../../Forms/CreateClubForm/CreateClubForm';
+import Aux from '../../../hoc/Auxiliary';
 
 class navbar extends Component {
 
     state = {
         displayList: "none",
-        searchValue: ""
+        searchValue: "",
+        displayModal: false
     };
 
     componentWillMount () {
@@ -27,6 +30,14 @@ class navbar extends Component {
         }
         // outside click
         this.setState({displayList: "none"});
+    };
+
+    openModal = () => {
+        this.setState({displayModal: true});
+    };
+
+    closeModal = () => {
+        this.setState({displayModal: false});
     };
 
 
@@ -75,60 +86,69 @@ class navbar extends Component {
 
         return (
 
-            <nav className={classes.topnav}>
-                <NavLink to={"/home"}>
-                    <button>
-                        <img src = {logo}
-                             alt = ""
-                             width={"40px"}
-                             height={"40px"}
-                        />
-                    </button>
-                    <button>Clubs</button>
-                </NavLink>
-
-                <div className={classes["topnav-right"]}>
-                    <i className={["fa fa-search", classes.searchButton].join(' ')}/>
-                    <input
-                        type={"text"} placeholder={'Search for your tribe'}
-                        onClick={(e) => this.enterSearch(e)}
-                        value={this.state.searchValue}
-                        onChange={(e) => this.enterSearch(e)}
-                    />
-
-                    <ul ref={node => this.node = node} style={{"display":this.state.displayList}} className={classes.searchList}>
-                        <li className={classes.searchListHeader}>
-                            Clubs
-                        </li>
-                        {clubsList}
-                        <li className={classes.searchListHeader}>
-                            Events
-                        </li>
-                        {eventsList}
-                    </ul>
-
-                    <button className={classes.createClubButton}>
-                        Create Club
-                    </button>
-                    <NavLink to={"/Events"}>
-                        <button style={{marginRight: "40px", marginLeft: "40px"}}>
-                            Events
+            <Aux>
+                <nav className={classes.topnav}>
+                    <NavLink to={"/home"}>
+                        <button>
+                            <img src = {logo}
+                                 alt = ""
+                                 width={"40px"}
+                                 height={"40px"}
+                            />
                         </button>
+                        <button>Clubs</button>
                     </NavLink>
-                    {/*
-                <button className={classes.bell}>
-                    <i className="far fa-bell"></i>
-                </button>*/}
-                    <button>User Name</button>
+
+                    <div className={classes["topnav-right"]}>
+                        <i className={["fa fa-search", classes.searchButton].join(' ')}/>
+                        <input
+                            type={"text"} placeholder={'Search for your tribe'}
+                            onClick={(e) => this.enterSearch(e)}
+                            value={this.state.searchValue}
+                            onChange={(e) => this.enterSearch(e)}
+                        />
+
+                        <ul ref={node => this.node = node} style={{"display":this.state.displayList}} className={classes.searchList}>
+                            <li className={classes.searchListHeader}>
+                                Clubs
+                            </li>
+                            {clubsList}
+                            <li className={classes.searchListHeader}>
+                                Events
+                            </li>
+                            {eventsList}
+                        </ul>
+
+                        <button
+                            className={classes.createClubButton}
+                            onClick={this.openModal}
+                        >
+                            Create Group
+                        </button>
+                        <NavLink to={"/Events"}>
+                            <button style={{marginRight: "40px", marginLeft: "40px"}}>
+                                Events
+                            </button>
+                        </NavLink>
+                        {/*
+                    <button className={classes.bell}>
+                        <i className="far fa-bell"></i>
+                    </button>*/}
+                        <button>User Name</button>
+                        <button>
+                            <i className={"fas fa-user-circle"}></i>
+                        </button>
+                        {/*
                     <button>
-                        <i className={"fas fa-user-circle"}></i>
-                    </button>
-                    {/*
-                <button>
-                    <i className="fas fa-chevron-down"></i>
-                </button>*/}
-                </div>
-            </nav>
+                        <i className="fas fa-chevron-down"></i>
+                    </button>*/}
+                    </div>
+                </nav>
+                <CreateClubForm
+                    modalClosed={this.closeModal}
+                    show={this.state.displayModal}
+                />
+            </Aux>
 
         );
     }

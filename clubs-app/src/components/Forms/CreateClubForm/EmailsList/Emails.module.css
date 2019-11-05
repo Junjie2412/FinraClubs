@@ -1,0 +1,16 @@
+.email {
+    display: inline-block;
+    border-radius: 30px;
+    background-color: yellow;
+    padding: 1% 2% 1% 2%;
+    margin: 1%;
+}
+
+.Emails {
+    width: 100%;
+}
+
+.value {
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
