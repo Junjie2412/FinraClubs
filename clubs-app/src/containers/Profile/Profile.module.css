@@ -1,0 +1,126 @@
+.ProfileDirectory{
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    width: 66%;
+    height: 1000px;
+    border-radius: 0 30px 0 0;
+    z-index: 10;
+    margin: -6% 0 2% 0;
+    padding: 3% 0 0 6%;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    background-color: white;
+    float: left;
+
+}
+
+.Profilepage {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.Header {
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    background-size: 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.image {
+    vertical-align: top;
+    display: inline-block;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+    min-width: 100%;
+    max-width: 100%;
+    position: absolute;
+    opacity: .8;
+
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    margin: auto;
+}
+
+.line {
+    width: 89%;
+    height: 1px;
+    margin: 0.4% 0 10px 0;
+    background-color: lightgray;
+    display: block;
+}
+
+.ProfileHome{
+    width: 70%;
+    height: fit-content;
+    margin: 0 0 2% 5%;
+    background-color: white;
+}
+
+.ProfileHeader {
+    font-family: 'DM Serif Display', serif;
+    text-align: left;
+    width: 100%;
+    margin: 0 0 5% 28%;
+    font-weight: normal;
+}
+
+.ProfileHeaderSmall {
+    font-family: 'DM Serif Display', serif;
+    text-align: left;
+    width: 100%;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.about {
+    text-align: left;
+    white-space: pre-line;
+    max-width: 89%;
+}
+
+.ProfileImageHolder {
+    width:200px;
+    height:200px;
+    border-radius:100px;
+    background-color: yellow;
+    position: absolute;
+    top: -100px;
+    overflow: hidden;
+}
+
+.ProfileImage {
+    vertical-align: top;
+    display: inline-block;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    margin: auto;
+
+    width: 100%;
+}
+
+.clubsList {
+    display: inline-block;
+    width: 33%;
+    padding: 2% 0 0 0;
+}

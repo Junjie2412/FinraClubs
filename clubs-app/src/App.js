@@ -5,6 +5,7 @@ import Navbar from './components/Navigation/Navbar/Navbar';
 import Homepage from './containers/HomePage/Homepage';
 import Auth from './containers/Auth/Auth';
 import Clubpage from './containers/ClubPage/ClubPage';
+import Profile from './containers/Profile/Profile';
 import Events from './containers/EventsPage/Events';
 import Preview from './components/Preview/Preview';
 import LoginPreview from './components/Preview/LoginPreview';
@@ -21,6 +22,7 @@ function App() {
             <Route path={"/clubpage/:clubname/:eventname"} component={Navbar}/>
             <Route path="/clubpage/:clubname" component={Navbar}/>
             <Route path={"/events"} component={Navbar}/>
+            <Route path={"/profile"} component={Navbar}/>
         </Switch>
 
         <Switch>
@@ -31,6 +33,7 @@ function App() {
             <Route path={"/clubpage/:clubname/:eventname"} component={Clubpage}/>
             <Route path="/clubpage/:clubname" component={Clubpage}/>
             <Route path="/events" component={Events}/>
+            <Route path={"/profile"} component={Profile}/>
             <Route path="/" exact component={Auth}/>
             <Redirect to=""/>
         </Switch>

@@ -22,8 +22,10 @@ const EventsList = (props) => {
     ));
     return (
         <div className={classes.CurrentEvents}>
-            <i className={["fa fa-search", classes.searchButton].join(' ')}></i>
-            <input type={"text"} className={classes.Search} placeholder={'Search events'}/>
+            <div className = {classes.SearchDiv}>
+                <input type={"text"} className={classes.Search} placeholder={'Search events'}/>
+                <i className={["fa fa-search", classes.searchButton].join(' ')}></i>
+            </div>
             <br/>
             {eventsList}
         </div>

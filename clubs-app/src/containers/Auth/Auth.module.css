@@ -19,27 +19,30 @@
     width: 26%;
     text-align: left;
 
-    margin: 20% 0 0 10%;
+    margin: 15% 0 0 10%;
 }
 
 .logo {
     display: inline-block;
-    margin: 10px 10px 0 0;
+    margin: 30px 10px 0 0;
+    vertical-align: top;
 }
 
 .LoginHeader{
     display: inline-block;
     font-family: 'DM Serif Display', serif;
     font-size: 50px;
+    margin-top: 5%;
 }
 
 .Login{
     width: 24%;
-    height: 700px;
+    /*height: 700px;*/
+    height: 300px;
     min-width: 300px;
-    min-height: 400px;
+    min-height: 300px;
     float: right;
-    margin: 5% 10% 0 0;
+    margin: 15% 10% 0 0;
     background-color: white;
     border-radius: 30px
 }
@@ -71,9 +74,10 @@
 }
 
 .Certify{
-    margin-top: 40px;
-    display: inline-block;
-    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    /*display: inline-block;*/
+    width: 70%;
     font-size: 14px;
     text-align: left;
 }
@@ -82,8 +86,8 @@
     cursor: pointer;
     display: block;
     width: 70%;
-    height: 8%;
-    margin: 5% 0 2% 15%;
+    height: 15%;
+    margin: 8% 0 2% 15%;
     border-radius: 50px;
     border: none;
     background-color: #9EE000;

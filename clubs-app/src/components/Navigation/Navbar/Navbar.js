@@ -92,8 +92,9 @@ class navbar extends Component {
                         <button>
                             <img src = {logo}
                                  alt = ""
-                                 width={"40px"}
-                                 height={"40px"}
+                                 width={"50px"}
+                                 height={"50px"}
+                                 style={{margin: "-10% 20% 0 10%"}}
                             />
                         </button>
                         <button>Clubs</button>
@@ -134,7 +135,11 @@ class navbar extends Component {
                     <button className={classes.bell}>
                         <i className="far fa-bell"></i>
                     </button>*/}
-                        <button>User Name</button>
+                        <NavLink to={"/profile"}>
+                            <button>
+                                Hill, Danielle
+                            </button>
+                        </NavLink>
                         <button>
                             <i className={"fas fa-user-circle"}></i>
                         </button>

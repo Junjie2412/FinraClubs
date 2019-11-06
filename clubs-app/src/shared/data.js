@@ -1,7 +1,8 @@
 import club0 from '../assets/club0ToastMasters.png';
-import club1 from '../assets/club1VolunteerPrograms.png';
+//import event0 from '../assets/club0Speaker.jpg';
+import club1 from '../assets/club1VolunteerPrograms.jpg';
 import club2 from '../assets/club2Children.JPG';
-import club3 from '../assets/club3Createathon.jpg';
+import club3 from '../assets/club3Care.png';
 import club4 from '../assets/club4Cricket.jpg';
 import club5 from '../assets/club4Cricket.jpg';
 
@@ -92,7 +93,7 @@ export const events = [
 
         clubName: "Volunteer Programs",
 
-        eventName: "2019 Volunteer Service Period: September 11 – October 31",
+        eventName: "2019 Volunteer Service Period",
 
         day: "14",
 

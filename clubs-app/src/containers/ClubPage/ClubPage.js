@@ -5,8 +5,8 @@ import EventHub from './EventHub/EventHub';
 import PeopleList from "../../components/PeopleList/PeopleList";
 import SearchFooter from "../../components/SearchFooter/SearchFooter";
 import {NavLink} from "react-router-dom";
-import peoplegoing from '../../assets/PeopleGoing.png';
 import clubroster from '../../assets/ClubRoster.png';
+import peoplegoing from '../../assets/PeopleGoing.png';
 import {clubs, events} from '../../shared/data'
 
 const Clubpage = (props) => {
@@ -19,17 +19,13 @@ const Clubpage = (props) => {
     };
 
     let getEvent = () => {
-        console.log(props.match.params.clubname);
-        console.log(props.match.params.eventname);
-        console.log(events);
         var found = events.find(function(element) {
             return element.clubName === props.match.params.clubname && element.eventName === props.match.params.eventname;
         });
-        console.log(found);
         return found;
     };
 
-    let view = (props.match.params.eventname ? <EventHub eventname={props.match.params.eventname} month={getEvent().month} day={getEvent().day} time={getEvent().time}/>:
+    let view = (props.match.params.eventname ? <EventHub eventname={props.match.params.eventname} eventDescription={"ds"} month={getEvent().month} day={getEvent().day} time={getEvent().time}/>:
         <ClubDirectory clubname={props.match.params.clubname}/>);
 
     return (
