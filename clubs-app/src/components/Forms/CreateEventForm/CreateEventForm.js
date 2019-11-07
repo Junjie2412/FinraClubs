@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import classes from './CreateClubForm.module.css';
+import classes from './CreateEventForm.module.css';
 import {ProgressBar} from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import ModalHeader from 'react-bootstrap/ModalHeader';
@@ -10,7 +10,7 @@ import Form from 'react-bootstrap/Form'
 import InterestGroups from '../../UI/InterestGroups/InterestGroups';
 import EmailsList from '../EmailsList/EmailsList';
 
-class CreateClubForm extends Component {
+class CreateEventForm extends Component {
 
     state = {
         progress: 0,
@@ -158,23 +158,22 @@ class CreateClubForm extends Component {
         let formPart1 = (
             <Form onSubmit={(event) => this.submit(event)} style={{display: this.state.formPart===1 ? "" : "none"}} className={classes.formGroup}>
                 <Form.Label className={classes.formLabel}>
-                    What is your group's name?
+                    What is your event's name?
                 </Form.Label>
                 <Form.Text>
                     Your name doesn't have to be long or serious, have fun, just remember be
-                    clear and think of your audience.  Name your group in terms they would understand.
+                    clear and think of your audience.  Name your event in terms they would understand.
                 </Form.Text>
-                <Form.Control className={classes.Input} type="input" placeholder="i.e Women in Tech" size={'sm'}
+                <Form.Control className={classes.Input} type="input" placeholder="i.e Volunteering" size={'sm'}
                               value={this.state.groupName} onChange={(e) => this.setGroupName(e)}
                               required
                 />
 
                 <Form.Label className={classes.formLabel}>
-                    Location
+                    Location of event
                 </Form.Label>
                 <Form.Text>
-                    Your location is your main place of gathering, when people look at your group's profile this
-                    is what they will see.  Have in mind our events can have any location you want.
+                    Your location is your main place of gathering, where everyone will go when your event begins.
                 </Form.Text>
                 <Form.Control className={classes.Input} as="select" placeholder="i.e Women in Tech" size={'sm'}
                               value={this.state.location} onChange={(e) => this.setLocation(e)}>
@@ -188,7 +187,7 @@ class CreateClubForm extends Component {
         let formPart2=(
             <Form onSubmit={(event) => this.submit2(event)} style={{display: this.state.formPart===2 ? "" : "none"}} className={classes.formGroup}>
                 <Form.Label className={classes.formLabel}>
-                    Search or select some interests that describe your group.
+                    Search or select some interests that describe your event.
                 </Form.Label>
                 <Form.Text>
                     Search from the list or create your own interests from this list.
@@ -201,11 +200,11 @@ class CreateClubForm extends Component {
                 <InterestGroups interests = {this.state.interests} click={this.onUpdateItems}/>
 
                 <Form.Label className={classes.formLabel}>
-                    Describe what your group is about
+                    Describe what your event is about
                 </Form.Label>
                 <Form.Text>
-                    In 500 words or less tell your audience what kind of events, activities, values, or ideas your
-                    group is about.
+                    In 500 words or less tell your audience what kind of activities, values, or ideas your
+                    event is about.
                 </Form.Text>
                 <Form.Control className={classes.Input} as="textarea" rows="3" size={'sm'}
                               value={this.state.description} onChange={(e) => this.setDescription(e)}
@@ -219,7 +218,7 @@ class CreateClubForm extends Component {
                     Invite Members
                 </Form.Label>
                 <Form.Text>
-                    As soon as your club is approved, we will send the invites to these members
+                    As soon as your event is approved, we will send the invites to these members.
                 </Form.Text>
                 <Form.Control className={classes.Input} type="email" placeholder="Add email here" size={'sm'}
                               value={this.state.member} onChange={(e) => this.setMember(e)}/>
@@ -229,7 +228,7 @@ class CreateClubForm extends Component {
 
         let formPart4 = (
             <h1 className={classes.Header} style={{textAlign: "center",display: this.state.formPart===4 ? "" : "none"}}>
-                Your group request has been submitted!
+                Your event has been submitted!
             </h1>
         );
 
@@ -241,7 +240,7 @@ class CreateClubForm extends Component {
                 onExited = {() => this.setState({progress: 0, formPart: 1})}
             >
                 <ModalHeader className={classes.Header} closeButton>
-                    <ModalTitle>Create Group</ModalTitle>
+                    <ModalTitle>Create Event</ModalTitle>
                 </ModalHeader>
                 <ModalBody>
                     <ProgressBar
@@ -275,4 +274,4 @@ class CreateClubForm extends Component {
 
 };
 
-export default CreateClubForm;
+export default CreateEventForm;

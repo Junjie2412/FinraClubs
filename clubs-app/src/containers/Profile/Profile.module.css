@@ -16,15 +16,6 @@
 
 }
 
-.Profilepage {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    position: fixed;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
 .Header {
     width: 100%;
     height: 500px;
@@ -64,9 +55,9 @@
 }
 
 .ProfileHome{
-    width: 70%;
+    width: 90%;
     height: fit-content;
-    margin: 0 0 2% 5%;
+    margin: 0 0 2% 0;
     background-color: white;
 }
 
@@ -74,7 +65,7 @@
     font-family: 'DM Serif Display', serif;
     text-align: left;
     width: 100%;
-    margin: 0 0 5% 28%;
+    margin: 0 0 5% 25%;
     font-weight: normal;
 }
 
@@ -123,4 +114,24 @@
     display: inline-block;
     width: 33%;
     padding: 2% 0 0 0;
+}
+
+.Tabs{
+    display: block;
+    width: 100%;
+    height: 5%;
+}
+
+.Tabs button{
+    font-family: 'DM Serif Display', serif;
+    background-color: transparent;
+    float: left;
+    outline: none;
+    border: none;
+    font-size: 28px;
+    margin: 0 3% 0 0;
+}
+
+.Tabs button:active, .Tabs  button:focus {
+    border-bottom: 10px solid #9EE000;
 }

@@ -37,3 +37,38 @@
 .SearchDiv {
     width: 350px;
 }
+
+.Button {
+    width: 30%;
+    height: 4.5%;
+    margin: 0 0 0 -20%;
+    border-radius: 30px;
+    border: none;
+    background-color: #9EE000;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.Button:active {
+    background-color: yellowgreen;
+    transform: translateY(4px);
+    outline: none;
+}
+
+/*
+.ToggleButton{
+    color: black !important;
+    background-color: #9EE000 !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.ToggleButton:active, .ToggleButton:focus , .ToggleButton:checked{
+    border: none !important;
+    outline: none !important;
+    background-color: blue !important;
+}*/

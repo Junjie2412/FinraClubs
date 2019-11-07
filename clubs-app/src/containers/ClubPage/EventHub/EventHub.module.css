@@ -59,11 +59,10 @@
 }
 
 .Button {
-    width: 230px;
+    width: 20%;
     height: 40px;
     border-radius: 30px;
-    border: none;
-    background-color: #9EE000;
+    border: 2px solid #9EE000;
     color: black;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
@@ -72,14 +71,20 @@
     outline: none;
     z-index: 30;
     margin-bottom: 0;
+    margin-right: 2%;
+    background-color: white;
 }
 
-.Button:active {
+.Button:active{
     background-color: yellowgreen;
     transform: translateY(4px);
     outline: none;
 }
 
+.ButtonOn{
+    background-color: #9EE000;
+    outline: none;
+}
 
 .Time {
     color: black;
@@ -106,4 +111,8 @@
     font-size: 1.5vw;
     z-index: 20;
     margin: 0 0 0 0;
+}
+
+.icon {
+    display: inline-block;
 }

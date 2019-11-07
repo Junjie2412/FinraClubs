@@ -81,7 +81,7 @@ export const events = [
 
         day: "12",
 
-        month: "December",
+        month: "November",
 
         time: "12:00 PM",
 
@@ -97,7 +97,7 @@ export const events = [
 
         day: "14",
 
-        month: "August",
+        month: "November",
 
         time: "9:00 AM",
 
@@ -113,24 +113,22 @@ export const events = [
 
         day: "25",
 
-        month: "April",
+        month: "November",
 
         time: "All day",
 
         image: club2
 
     },
-
-
     {
 
-        clubName: "Back-Up Care Program ",
+        clubName: "Back-Up Care Program",
 
-            eventName: "Back-Up Care Program Information Session",
+        eventName: "Back-Up Care Program Information Session",
 
         day: "4",
 
-        month: "November",
+        month: "December",
 
         time: "2:00 PM",
 
@@ -145,7 +143,7 @@ export const events = [
 
         day: "18",
 
-        month: "August",
+        month: "December",
 
         time: "2:00 PM",
 
@@ -160,7 +158,7 @@ export const events = [
 
         day: "12",
 
-        month: "April",
+        month: "January",
 
         time: "4:00 PM",
 
@@ -174,7 +172,7 @@ export const events = [
 
         day: "20",
 
-        month: "April",
+        month: "January",
 
         time: "4:00 PM",
 
