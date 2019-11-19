@@ -8,7 +8,8 @@ class EventsList extends Component{
 
     state = {
         displayModal: false,
-        eventSearch: ""
+        eventSearch: "",
+        toggle: "0%"
     };
 
     openModal = () => {
@@ -23,6 +24,10 @@ class EventsList extends Component{
         this.setState({eventSearch: event.target.value});
     };
 
+    toggle = pos => {
+        this.setState({toggle: pos});
+    };
+
     render() {
         const eventsList = events.map(event => (
             event.eventName.toUpperCase().includes(this.state.eventSearch.toUpperCase()) ? <EventsPortalBig click = {console.log(event)} key={event.eventName} image={event.image} name={event.eventName} time={event.time} clubname = {event.clubName} day={event.day} month={event.month}/> : null
@@ -32,13 +37,27 @@ class EventsList extends Component{
             <div className={classes.CurrentEvents}>
                 <h1 className={classes.title}>Events</h1>
                 <div className={classes.line}/>
-                <div className = {classes.SearchDiv}>
-                    <i className={["fa fa-search", classes.searchButton].join(' ')}></i>
-                    <input type={"text"} className={classes.Search} placeholder={'Search events'} onChange={e => this.searchEvents(e)}/>
+                <div className={classes.ToolBar}>
+                    <button className={classes.Toggle}>
+                        <button style={{left: this.state.toggle}}/>
+                        <div style={{left: "0%"}} onClick={() => this.toggle("0%")}>
+                           All
+                        </div>
+                        <div style={{left: "33.5%"}} onClick={() => this.toggle("33.5%")}>
+                            Upcoming
+                        </div>
+                        <div style={{left: "67.2%"}} onClick={() => this.toggle("67.2%")}>
+                            Past
+                        </div>
+                    </button>
+                    <div className = {classes.SearchDiv}>
+                        <i className={["fa fa-search", classes.searchButton].join(' ')}></i>
+                        <input type={"text"} className={classes.Search} placeholder={'Search events'} onChange={e => this.searchEvents(e)}/>
+                    </div>
+                    <button className={classes.Button} onClick={this.openModal}>
+                        Create Event
+                    </button>
                 </div>
-                <button className={classes.Button} onClick={this.openModal}>
-                    Create Event
-                </button>
                 <br/>
                 {eventsList}
                 <CreateEventForm

@@ -8,7 +8,7 @@ const Events = (props) => {
     return (
         <div className={classes.Events}>
             <EventsList/>
-            <EventsOutlook/>
+            <EventsOutlook header={"My Events"}/>
             <SearchFooter header = "Suggested Events"/>
         </div>
     )

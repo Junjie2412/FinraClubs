@@ -135,3 +135,60 @@
 .Tabs button:active, .Tabs  button:focus {
     border-bottom: 10px solid #9EE000;
 }
+
+.Toggle {
+    width: 29%;
+    height: 4%;
+    border-radius: 30px;
+    border: 2px solid #9EE000;
+    margin: 0 1% 0 0;
+    background-color: white;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    padding-bottom: 1%;
+    position: relative;
+    float: left;
+}
+.Toggle:active, .Toggle:focus {
+    outline: none
+}
+
+.Toggle div{
+    width: 33.3%;
+    height: 100%;
+    border-radius: 30px;
+    border: none;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    padding: 2% 0 0 0;
+}
+
+.Toggle button{
+    width: 33.3%;
+    height: 100%;
+    border-radius: 30px;
+    border: none;
+    background-color: #9EE000;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 1s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.3s;
+}

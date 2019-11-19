@@ -9,6 +9,17 @@
     float: left;
 }
 
+.ClubOutlookListView {
+    box-sizing: border-box;
+    font-family: 'DM Serif Display', serif;
+    margin: 0 0 0 0;
+    width: 33.2%;
+    height: 700px;
+    padding: 2% 0 0 0;
+    display: inline-block;
+    float: left;
+}
+
 .Header {
     font-family: 'DM Serif Display', serif;
     font-weight: normal;
@@ -17,4 +28,15 @@
     margin: 0 0 20px 5%;
     width: 100%;
     text-align: left;
+}
+
+
+.HeaderListView {
+    font-family: 'DM Serif Display', serif;
+    font-weight: normal;
+    font-size: 28px;
+    padding: 0 0 0 10%;
+    width: 100%;
+    text-align: left;
+    margin: 0 0 20px 0;
 }

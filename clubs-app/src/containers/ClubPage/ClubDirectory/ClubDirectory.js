@@ -8,11 +8,18 @@ import EventsList from "./EventsListClubPage/EventsList";
 class ClubDirectory extends Component {
 
     state = {
-        view: "home"
+        view: "home",
+        homeActive: true,
+        eventsActive: false
     };
 
     changeView = (view) => {
-        return this.setState({view: view})
+        this.setState({view: view});
+        if (view === "home"){
+            return this.setState({homeActive: true, eventsActive: false});
+        } else if (view === "Events") {
+            return this.setState({homeActive: false, eventsActive: true});
+        }
     };
 
     render() {
@@ -33,8 +40,8 @@ class ClubDirectory extends Component {
         return (
             <div className={classes.ClubDirectory}>
                 <div className={classes.Tabs}>
-                    <button onClick={() => this.changeView("home")}>Home</button>
-                    <button onClick={() => this.changeView("Events")}>Events</button>
+                    <button className={this.state.homeActive ? classes.Active : ""} onClick={() => this.changeView("home")}>Home</button>
+                    <button className={this.state.eventsActive ? classes.Active : ""} onClick={() => this.changeView("Events")}>Events</button>
                 </div>
                 <div className={classes.line}/>
                 {view}

@@ -7,11 +7,18 @@ const ClubPortal = (props, context) => {
     //non members - see apply and the top div
     return (
         <NavLink to={"/clubpage/"+props.name} style={{pointerEvents:props.disable ? "none" : ""}}>
-            <div className={[props.small ? classes.ClubPortalSmall : classes.ClubPortal,props.full ? classes.Full: "", props.fit ? classes.FitPage : ""].join(" ")}>
-                <div className={classes.imageContainer}>
-                    <img className={classes.image} alt={''} src={props.image}/>
+            <div className={
+                [
+                    props.small ? classes.ClubPortalSmall : classes.ClubPortal,
+                    props.full ? classes.Full: "",
+                    props.fit ? classes.FitPage : "",
+                    props.listView ? classes.ClubsPortalListView : ""
+                ].join(" ")}
+            >
+                <div className={props.listView ? classes.imageContainerListView : classes.imageContainer}>
+                    <img className={props.listView ? classes.imageListView : classes.image} alt={''} src={props.image}/>
                 </div>
-                <h3 className={[props.small ? classes.HeaderSmall : classes.Header].join(' ')}>
+                <h3 className={[props.small ? classes.HeaderSmall : (props.listView ? classes.HeaderListView : classes.Header)].join(' ')}>
                     {props.name}
                 </h3>
             </div>

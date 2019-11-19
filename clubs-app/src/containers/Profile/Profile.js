@@ -12,7 +12,8 @@ import EventsPortalBig from "../EventsPage/EventsPortalBig/EventsPortalBig";
 class Profile extends Component {
 
     state = {
-        view: "home"
+        view: "home",
+        toggle: "0%"
     };
 
     click = e => {
@@ -23,9 +24,12 @@ class Profile extends Component {
         return this.setState({view: view})
     };
 
+    toggle = pos => {
+        this.setState({toggle: pos});
+    };
 
     render() {
-        let clubsList = clubs.slice(0, 3).map(club => (
+        let clubsList = clubs.slice(2, 5).map(club => (
             <Clubportal key={club.clubName} image={club.image} name={club.clubName} small fit/>
         ));
 
@@ -63,6 +67,18 @@ class Profile extends Component {
                 ]}
                                 click={this.click}/>
             </Aux> : <Aux>
+                <button className={classes.Toggle}>
+                    <button style={{left: this.state.toggle}}/>
+                    <div style={{left: "0%"}} onClick={() => this.toggle("0%")}>
+                        All
+                    </div>
+                    <div style={{left: "33.5%"}} onClick={() => this.toggle("33.5%")}>
+                        Upcoming
+                    </div>
+                    <div style={{left: "67.2%"}} onClick={() => this.toggle("67.2%")}>
+                        Past
+                    </div>
+                </button>
                 <div style={{width: "100%", height: "100%",margin: "0 0 0 -9%"}}>
                 {eventsList}
                 </div>

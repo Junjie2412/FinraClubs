@@ -9,6 +9,7 @@ import ModalTitle from 'react-bootstrap/ModalTitle'
 import Form from 'react-bootstrap/Form'
 import InterestGroups from '../../UI/InterestGroups/InterestGroups';
 import EmailsList from '../EmailsList/EmailsList';
+import {NavLink} from "react-router-dom";
 
 class CreateClubForm extends Component {
 
@@ -176,7 +177,7 @@ class CreateClubForm extends Component {
                     Your location is your main place of gathering, when people look at your group's profile this
                     is what they will see.  Have in mind our events can have any location you want.
                 </Form.Text>
-                <Form.Control className={classes.Input} as="select" placeholder="i.e Women in Tech" size={'sm'}
+                <Form.Control className={classes.Input} as="select" size={'sm'}
                               value={this.state.location} onChange={(e) => this.setLocation(e)}>
                     <option value={'Rockville'}>Rockville</option>
                     <option value={'Washington, D.C.'}>Washington, D.C.</option>
@@ -228,9 +229,9 @@ class CreateClubForm extends Component {
         );
 
         let formPart4 = (
-            <h1 className={classes.Header} style={{textAlign: "center",display: this.state.formPart===4 ? "" : "none"}}>
-                Your group request has been submitted!
-            </h1>
+            <h4 className={classes.Header} style={{textAlign: "left",display: this.state.formPart===4 ? "" : "none"}}>
+                <i className="fas fa-check-circle" style={{color: "#9EE000"}}></i> Your request to create a group was successfully sent.
+            </h4>
         );
 
         return (
@@ -239,36 +240,44 @@ class CreateClubForm extends Component {
                 show={this.props.show}
                 size="lg"
                 onExited = {() => this.setState({progress: 0, formPart: 1})}
+                scrollable
             >
-                <ModalHeader className={classes.Header} closeButton>
-                    <ModalTitle>Create Group</ModalTitle>
-                </ModalHeader>
-                <ModalBody>
-                    <ProgressBar
-                        className = {classes.Progress}
-                        variant={'warning'}
-                        now={this.state.progress}
-                    />
-                    {formPart1}
-                    {formPart2}
-                    {formPart3}
-                    {formPart4}
-                </ModalBody>
-                <ModalFooter>
-                    <div className={classes.buttonGroup} style={{display: this.state.formPart!==4 ? "" : "none"}}>
-                        <button className={classes.leftButton} onClick={() => this.addProgress(-100/3)}>
-                            {this.state.formPart === 1 ? "Cancel":"Previous"}
-                        </button>
-                        <button className={classes.rightButton} onClick={() => this.addProgress(100/3)}>
-                            {this.state.formPart === 3 ? "Submit":"Next"}
-                        </button>
-                    </div>
-                    <div className={classes.buttonGroup} style={{display: this.state.formPart===4 ? "" : "none"}}>
-                        <button className={classes.CloseButton} onClick={() => this.addProgress(100/3)}>
-                            {"Close"}
-                        </button>
-                    </div>
-                </ModalFooter>
+                    <ModalHeader className={classes.Header} closeButton>
+                        <ModalTitle>Create Group</ModalTitle>
+                    </ModalHeader>
+                    <ModalBody
+                        className={classes.ModalBody}
+                    >
+                        <ProgressBar
+                            className = {classes.Progress}
+                            variant={'warning'}
+                            now={this.state.progress}
+                        />
+                        {formPart1}
+                        {formPart2}
+                        {formPart3}
+                        {formPart4}
+                    </ModalBody>
+                    <ModalFooter>
+                        <div className={classes.buttonGroup} style={{display: this.state.formPart!==4 ? "" : "none"}}>
+                            <button className={classes.leftButton} onClick={() => this.addProgress(-100/3)}>
+                                {this.state.formPart === 1 ? "Cancel":"Previous"}
+                            </button>
+                            <button className={classes.rightButton} onClick={() => this.addProgress(100/3)}>
+                                {this.state.formPart === 3 ? "Submit":"Next"}
+                            </button>
+                        </div>
+                        <div className={classes.buttonGroup} style={{display: this.state.formPart===4 ? "" : "none"}}>
+                            <NavLink to={"/home"}>
+                                <button className={classes.leftButton} onClick={() => this.addProgress(100/3)}>
+                                    Home Page
+                                </button>
+                            </NavLink>
+                            <button className={classes.rightButton} onClick={() => this.addProgress(100/3)}>
+                                Close
+                            </button>
+                        </div>
+                    </ModalFooter>
             </Modal>
         )
     }

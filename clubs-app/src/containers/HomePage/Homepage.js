@@ -13,9 +13,9 @@ class homepage extends Component {
                 <div className={classes.Header}>
                     <SubHeader full>Welcome to Clubs</SubHeader>
                 </div>
-                <ClubOutlook/>
+                <ClubOutlook Header={"Featured Clubs"}/>
                 <div className={classes.v2}></div>
-                <EventsOutlook/>
+                <EventsOutlook header={"Upcoming Events"}/>
                 <SearchFooter header={"Categories"} search placeholder={"Search by Category"}/>
             </div>
         );

@@ -31,9 +31,10 @@
     margin: 0 3% 0 0;
 }
 
-.Tabs button:active, .Tabs  button:focus {
-    border-bottom: 10px solid #9EE000;
+.Active {
+    border-bottom: 10px solid #9EE000 !important;
 }
+
 
 .line {
     width: 89%;

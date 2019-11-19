@@ -4,15 +4,13 @@ import logo from '../../../assets/ClubLogoGREEN.png';
 import classes from './Navbar.module.css';
 import {clubs} from '../../../shared/data';
 import {events} from '../../../shared/data';
-import CreateClubForm from '../../Forms/CreateClubForm/CreateClubForm';
 import Aux from '../../../hoc/Auxiliary';
 
 class navbar extends Component {
 
     state = {
         displayList: "none",
-        searchValue: "",
-        displayModal: false
+        searchValue: ""
     };
 
     componentWillMount () {
@@ -30,14 +28,6 @@ class navbar extends Component {
         }
         // outside click
         this.setState({displayList: "none"});
-    };
-
-    openModal = () => {
-        this.setState({displayModal: true});
-    };
-
-    closeModal = () => {
-        this.setState({displayModal: false});
     };
 
 
@@ -120,15 +110,15 @@ class navbar extends Component {
                             {eventsList}
                         </ul>
 
-                        <button
-                            className={classes.createClubButton}
-                            onClick={this.openModal}
-                        >
-                            Create Group
-                        </button>
-                        <NavLink to={"/Events"}>
-                            <button style={{marginRight: "40px", marginLeft: "40px"}}>
+                        <NavLink to={"/events"}>
+                            <button style={{marginRight: "30px", marginLeft: "60px", fontWeight: "bold"}}>
                                 Events
+                            </button>
+                        </NavLink>
+
+                        <NavLink to={"/clubs"}>
+                            <button style={{marginRight: "60px", marginLeft: "30px", fontWeight: "bold"}}>
+                                Groups
                             </button>
                         </NavLink>
                         {/*
@@ -149,10 +139,6 @@ class navbar extends Component {
                     </button>*/}
                     </div>
                 </nav>
-                <CreateClubForm
-                    modalClosed={this.closeModal}
-                    show={this.state.displayModal}
-                />
             </Aux>
 
         );

@@ -1,0 +1,70 @@
+.title{
+    width: 66%;
+    text-align: left;
+    margin: 3% 0 2% 9%;
+    font-family: 'DM Serif Display', serif;
+    font-weight: normal;
+}
+
+.CurrentEvents{
+    width: 66%;
+    height: 1800px;
+    display: inline-block;
+    float: left;
+}
+
+.Search {
+    float: left;
+    margin: 3% 0 4% 33%;
+    font-size: 18px;
+    border-radius: 30px;
+    width: 300px;
+    height: 40px;
+    padding: 0 0 0 35px;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    outline: none;
+    background-color: #F0F0F0;
+}
+
+.searchButton {
+    float: left;
+    font-size: 24px;
+    position: relative;
+    color: #818181;
+    left: 370px;
+    top: 43px;
+}
+
+.line {
+    width: 82%;
+    height: 1px;
+    margin: 0.8% 0 0 9%;
+    background-color: lightgrey;
+    display: block;
+}
+
+.Button {
+    width: 20%;
+    height: 2.5%;
+    margin: 3% 0 0 -35%;
+    border-radius: 30px;
+    border: none;
+    background-color: #9EE000;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.Button:active {
+    background-color: yellowgreen;
+    transform: translateY(4px);
+    outline: none;
+}
+
+.SearchDiv {
+    width: 350px;
+}

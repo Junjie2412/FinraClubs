@@ -12,7 +12,7 @@ class EventsOutlook extends Component {
         ));
         return (
             <div className={classes.EventsOutlook}>
-                <h1 className={classes.Header}>Upcoming Events</h1>
+                <h1 className={classes.Header}>{this.props.header}</h1>
                 {eventsList}
             </div>
         )

@@ -9,13 +9,15 @@ import ModalTitle from 'react-bootstrap/ModalTitle'
 import Form from 'react-bootstrap/Form'
 import InterestGroups from '../../UI/InterestGroups/InterestGroups';
 import EmailsList from '../EmailsList/EmailsList';
+import {NavLink} from "react-router-dom";
 
 class CreateEventForm extends Component {
 
     state = {
         progress: 0,
         formPart: 1,
-        groupName: "",
+        eventName: "",
+        clubName: "",
         location: "",
         description: "",
         interest: "",
@@ -105,8 +107,12 @@ class CreateEventForm extends Component {
         }
     }
 
-    setGroupName = event => {
-        this.setState({groupName: event.target.value})
+    setEventName = event => {
+        this.setState({eventName: event.target.value})
+    };
+
+    setClubName = event => {
+        this.setState({clubName: event.target.value})
     };
 
     setLocation = event => {
@@ -165,7 +171,7 @@ class CreateEventForm extends Component {
                     clear and think of your audience.  Name your event in terms they would understand.
                 </Form.Text>
                 <Form.Control className={classes.Input} type="input" placeholder="i.e Volunteering" size={'sm'}
-                              value={this.state.groupName} onChange={(e) => this.setGroupName(e)}
+                              value={this.state.eventName} onChange={(e) => this.setEventName(e)}
                               required
                 />
 
@@ -175,12 +181,23 @@ class CreateEventForm extends Component {
                 <Form.Text>
                     Your location is your main place of gathering, where everyone will go when your event begins.
                 </Form.Text>
-                <Form.Control className={classes.Input} as="select" placeholder="i.e Women in Tech" size={'sm'}
+                <Form.Control className={classes.Input} as="select" size={'sm'}
                               value={this.state.location} onChange={(e) => this.setLocation(e)}>
                     <option value={'Rockville'}>Rockville</option>
                     <option value={'Washington, D.C.'}>Washington, D.C.</option>
                     <option value={'New York'}>New York</option>
                 </Form.Control>
+
+                <Form.Label className={classes.formLabel}>
+                    What club is your event associated with?
+                </Form.Label>
+                <Form.Text>
+                    This can be left blank if you wish to create an event thats not associated with any club
+                </Form.Text>
+                <Form.Control className={classes.Input} type="input" placeholder="Club Name" size={'sm'}
+                              value={this.state.clubName} onChange={(e) => this.setClubName(e)}
+                              required
+                />
             </Form>
         );
 
@@ -227,9 +244,9 @@ class CreateEventForm extends Component {
         );
 
         let formPart4 = (
-            <h1 className={classes.Header} style={{textAlign: "center",display: this.state.formPart===4 ? "" : "none"}}>
-                Your event has been submitted!
-            </h1>
+            <h4 className={classes.Header} style={{textAlign: "left",display: this.state.formPart===4 ? "" : "none"}}>
+                <i className="fas fa-check-circle" style={{color: "#9EE000"}}></i> Your request to create an event was successfully sent.
+            </h4>
         );
 
         return (
@@ -242,7 +259,9 @@ class CreateEventForm extends Component {
                 <ModalHeader className={classes.Header} closeButton>
                     <ModalTitle>Create Event</ModalTitle>
                 </ModalHeader>
-                <ModalBody>
+                <ModalBody
+                    className={classes.ModalBody}
+                >
                     <ProgressBar
                         className = {classes.Progress}
                         variant={'warning'}
@@ -263,8 +282,13 @@ class CreateEventForm extends Component {
                         </button>
                     </div>
                     <div className={classes.buttonGroup} style={{display: this.state.formPart===4 ? "" : "none"}}>
-                        <button className={classes.CloseButton} onClick={() => this.addProgress(100/3)}>
-                            {"Close"}
+                        <NavLink to={"/home"}>
+                            <button className={classes.leftButton} onClick={() => this.addProgress(100/3)}>
+                                Home Page
+                            </button>
+                        </NavLink>
+                        <button className={classes.rightButton} onClick={() => this.addProgress(100/3)}>
+                            Close
                         </button>
                     </div>
                 </ModalFooter>
