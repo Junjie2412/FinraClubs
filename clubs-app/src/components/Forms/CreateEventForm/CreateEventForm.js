@@ -255,6 +255,7 @@ class CreateEventForm extends Component {
                 show={this.props.show}
                 size="lg"
                 onExited = {() => this.setState({progress: 0, formPart: 1})}
+                scrollable
             >
                 <ModalHeader className={classes.Header} closeButton>
                     <ModalTitle>Create Event</ModalTitle>

@@ -8,6 +8,7 @@ class EventsList extends Component {
 
     state = {
         events: "upcoming",
+        toggle: "0%",
         displayModal: false,
         eventSearch: ""
     };
@@ -28,6 +29,10 @@ class EventsList extends Component {
         this.setState({eventSearch: event.target.value});
     };
 
+    toggle = pos => {
+        this.setState({toggle: pos});
+    };
+
     render() {
         let getClubEvents = () => {
             let list = [];
@@ -46,13 +51,27 @@ class EventsList extends Component {
         ));
         return (
             <div className={classes.CurrentEvents}>
-                <div className = {classes.SearchDiv}>
-                    <input type={"text"} className={classes.Search} placeholder={'Search events'} onChange={e => this.searchEvents(e)}/>
-                    <i className={["fa fa-search", classes.searchButton].join(' ')}></i>
+                <div className={classes.ToolBar}>
+                    <button className={classes.Toggle}>
+                        <button style={{left: this.state.toggle}}/>
+                        <div style={{left: "0%"}} onClick={() => this.toggle("0%")}>
+                            All
+                        </div>
+                        <div style={{left: "33.5%"}} onClick={() => this.toggle("33.5%")}>
+                            Upcoming
+                        </div>
+                        <div style={{left: "67.2%"}} onClick={() => this.toggle("67.2%")}>
+                            Past
+                        </div>
+                    </button>
+                    <div className = {classes.SearchDiv}>
+                        <input type={"text"} className={classes.Search} placeholder={'Search events'} onChange={e => this.searchEvents(e)}/>
+                        <i className={["fa fa-search", classes.searchButton].join(' ')}></i>
+                    </div>
+                    <button className={classes.Button} onClick={this.openModal}>
+                        Create Event
+                    </button>
                 </div>
-                <button className={classes.Button} onClick={this.openModal}>
-                    Create Event
-                </button>
                 <br/>
                 {eventsList}
                 <CreateEventForm

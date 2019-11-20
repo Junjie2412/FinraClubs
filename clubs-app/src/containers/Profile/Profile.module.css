@@ -132,10 +132,6 @@
     margin: 0 3% 0 0;
 }
 
-.Tabs button:active, .Tabs  button:focus {
-    border-bottom: 10px solid #9EE000;
-}
-
 .Toggle {
     width: 29%;
     height: 4%;

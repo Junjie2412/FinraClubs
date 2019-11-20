@@ -5,18 +5,17 @@
 }
 
 .CurrentEvents{
-    width: 66%;
+    width: 85%;
     height: 1000px;
     display: inline-block;
     float: left;
 }
 
 .Search {
-    float: left;
-    margin: 1% calc(96.7% - 300px) 4% 0;
+    vertical-align: top;
     font-size: 18px;
     border-radius: 30px;
-    width: 300px;
+    width: 100%;
     height: 40px;
     padding: 0 0 0 35px;
     font-family: 'Open Sans', sans-serif;
@@ -26,24 +25,28 @@
 }
 
 .searchButton {
-    float: left;
     font-size: 24px;
     position: relative;
     color: #818181;
-    left: 260px;
-    top: -45px;
+    left: 130px;
+    bottom: 32px;
 }
 
 .SearchDiv {
-    width: 350px;
+    float: left;
+    width: 300px;
+    display: inline-block;
+    height: 100%;
+    margin: 0 1% 0 1%;
 }
 
 .Button {
-    width: 30%;
-    height: 4.5%;
-    margin: 0 0 0 -20%;
+    float: left;
+    width: 20%;
+    height: 100%;
     border-radius: 30px;
     border: none;
+    margin: 0 1% 0 0;
     background-color: #9EE000;
     color: black;
     font-family: 'Open Sans', sans-serif;
@@ -51,6 +54,7 @@
     font-size: 20px;
     cursor: pointer;
     outline: none;
+    display: inline-block;
 }
 
 .Button:active {
@@ -59,16 +63,64 @@
     outline: none;
 }
 
-/*
-.ToggleButton{
-    color: black !important;
-    background-color: #9EE000 !important;
-    border: none !important;
-    outline: none !important;
+.ToolBar {
+    height: 4%;
+    width: 100%;
+    margin-top: 2%;
 }
 
-.ToggleButton:active, .ToggleButton:focus , .ToggleButton:checked{
-    border: none !important;
-    outline: none !important;
-    background-color: blue !important;
-}*/
+.Toggle {
+    width: 32%;
+    height: 100%;
+    border-radius: 30px;
+    border: 2px solid #9EE000;
+    background-color: white;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    padding-bottom: 1.5%;
+    position: relative;
+    float: left;
+}
+.Toggle:active, .Toggle:focus {
+    outline: none
+}
+
+.Toggle div{
+    width: 33.3%;
+    height: 100%;
+    border-radius: 30px;
+    border: none;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    padding: 2% 0 0 0;
+}
+
+.Toggle button{
+    width: 33.3%;
+    height: 100%;
+    border-radius: 30px;
+    border: none;
+    background-color: #9EE000;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 1s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.3s;
+}

@@ -13,7 +13,9 @@ class Profile extends Component {
 
     state = {
         view: "home",
-        toggle: "0%"
+        toggle: "0%",
+        homeActive: true,
+        eventsActive: false
     };
 
     click = e => {
@@ -21,7 +23,13 @@ class Profile extends Component {
     };
 
     changeView = (view) => {
-        return this.setState({view: view})
+        if (view === "home") {
+            return this.setState({view: view, homeActive: true, eventsActive: false})
+        }
+
+        if (view === "events") {
+            return this.setState({view: view, homeActive: false, eventsActive: true})
+        }
     };
 
     toggle = pos => {
@@ -100,8 +108,8 @@ class Profile extends Component {
                     <div className={classes.line}/>
 
                     <div className={classes.Tabs}>
-                        <button onClick={() => this.changeView("home")}>About</button>
-                        <button onClick={() => this.changeView("Events")}>Events</button>
+                        <button style={{borderBottom: this.state.homeActive ? "10px solid #9EE000" : ""}} onClick={() => this.changeView("home")}>About</button>
+                        <button style={{borderBottom: this.state.eventsActive ? "10px solid #9EE000" : ""}} onClick={() => this.changeView("events")}>Events</button>
                     </div>
                     <div className={classes.line}/>
                     {view}

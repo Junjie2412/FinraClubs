@@ -1,10 +1,11 @@
 import club0 from '../assets/club0ToastMasters.png';
 //import event0 from '../assets/club0Speaker.jpg';
 import club1 from '../assets/club1VolunteerPrograms.jpg';
-import club2 from '../assets/club2Children.JPG';
-import club3 from '../assets/club3Care.png';
+import club2 from '../assets/club2Children.jpg';
+import club3 from '../assets/club3Care.webp';
 import club4 from '../assets/club4Cricket.jpg';
-import club5 from '../assets/club4Cricket.jpg';
+import club5 from '../assets/club5Employee.jpeg';
+import event5 from '../assets/event5QuarterlySpearking.jpg';
 
 export const clubs =[
 
@@ -147,7 +148,7 @@ export const events = [
 
         time: "2:00 PM",
 
-        image: club5
+        image: event5
 
     },
     {
