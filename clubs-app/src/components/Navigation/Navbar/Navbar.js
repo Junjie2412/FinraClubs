@@ -5,12 +5,17 @@ import classes from './Navbar.module.css';
 import {clubs} from '../../../shared/data';
 import {events} from '../../../shared/data';
 import Aux from '../../../hoc/Auxiliary';
+import Dropdown from 'react-bootstrap/Dropdown';
+import CreateClubForm from "../../Forms/CreateClubForm/CreateClubForm";
+import CreateEventForm from "../../Forms/CreateEventForm/CreateEventForm";
 
 class navbar extends Component {
 
     state = {
         displayList: "none",
-        searchValue: ""
+        searchValue: "",
+        displayCreateClubModal: false,
+        displayCreateEventModal: false
     };
 
     componentWillMount () {
@@ -30,6 +35,21 @@ class navbar extends Component {
         this.setState({displayList: "none"});
     };
 
+    openCreateClubModal = () => {
+        this.setState({displayCreateClubModal: true});
+    };
+
+    closeCreateClubModal = () => {
+        this.setState({displayCreateClubModal: false});
+    };
+
+    openCreateEventModal = () => {
+        this.setState({displayCreateEventModal: true});
+    };
+
+    closeCreateEventModal = () => {
+        this.setState({displayCreateEventModal: false});
+    };
 
     enterSearch = (event) => {
         this.setState({searchValue: event.target.value});
@@ -133,12 +153,38 @@ class navbar extends Component {
                         <button>
                             <i className={"fas fa-user-circle"}></i>
                         </button>
-                        {/*
-                    <button>
-                        <i className="fas fa-chevron-down"></i>
-                    </button>*/}
+                        <button>
+                            <Dropdown alignRight variant={"info"}>
+                                <Dropdown.Toggle id="dropdown-custom-1" variant={"secondary"}></Dropdown.Toggle>
+                                <Dropdown.Menu className={classes.dropDownMenu}>
+                                    <Dropdown.Item eventKey="1" className={classes.dropDownMenuItem} >
+                                        <NavLink to={"/profile"}>
+                                            My Profile
+                                        </NavLink>
+                                    </Dropdown.Item>
+                                    <Dropdown.Item className={classes.createClubButton} onClick={this.openCreateClubModal} >
+                                        Create Group
+                                    </Dropdown.Item>
+                                    <Dropdown.Item className={classes.createClubButton} onClick={this.openCreateEventModal} >
+                                        Create Event
+                                    </Dropdown.Item>
+                                    <Dropdown.Divider />
+                                    <Dropdown.Item className={classes.dropDownMenuItem} eventKey="4"><i className="fas fa-cog"></i> Account Settings</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        </button>
                     </div>
                 </nav>
+
+                <CreateClubForm
+                    modalClosed={this.closeCreateClubModal}
+                    show={this.state.displayCreateClubModal}
+                />
+
+                <CreateEventForm
+                    modalClosed={this.closeCreateEventModal}
+                    show={this.state.displayCreateEventModal}
+                />
             </Aux>
 
         );

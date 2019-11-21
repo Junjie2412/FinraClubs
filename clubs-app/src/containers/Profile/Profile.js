@@ -48,6 +48,7 @@ class Profile extends Component {
         let view = this.state.view==="home" ?
             <Aux>
                 <p className={classes.about}>
+
                     Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
                     {'\n\n'}
                     Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
@@ -103,19 +104,19 @@ class Profile extends Component {
                              className={classes.ProfileImage}
                         />
                     </div>
-                    <h1 className={classes.ProfileHeader}>Hill, Danielle</h1>
-
+                    <h1 className={classes.ProfileHeader}> Hill, Danielle </h1>
                     <div className={classes.line}/>
 
                     <div className={classes.Tabs}>
-                        <button style={{borderBottom: this.state.homeActive ? "10px solid #9EE000" : ""}} onClick={() => this.changeView("home")}>About</button>
-                        <button style={{borderBottom: this.state.eventsActive ? "10px solid #9EE000" : ""}} onClick={() => this.changeView("events")}>Events</button>
+                        <button style={{borderBottom: this.state.homeActive ? "8px solid #9EE000" : ""}} onClick={() => this.changeView("home")}>About </button>
+                        <button style={{borderBottom: this.state.eventsActive ? "8px solid #9EE000" : ""}} onClick={() => this.changeView("events")}>Events</button>
+                        <i className={["fas fa-pencil-alt",classes.icon].join(" ")}/>
                     </div>
                     <div className={classes.line}/>
                     {view}
                 </div>
                 <div className={classes.clubsList}>
-                    <h1 className={classes.ProfileHeaderSmall}>Clubs Joined</h1>
+                    <h1 className={classes.ProfileHeaderSmall}>Groups Joined</h1>
                     {clubsList}
                 </div>
                 <SearchFooter header = "Suggested Clubs"/>

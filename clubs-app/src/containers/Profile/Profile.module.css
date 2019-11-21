@@ -118,7 +118,7 @@
 
 .Tabs{
     display: block;
-    width: 100%;
+    width: 88%;
     height: 5%;
 }
 
@@ -187,4 +187,15 @@
     top: 0;
     -webkit-transition: all 1s; /* For Safari 3.1 to 6.0 */
     transition: left 0.3s;
+}
+
+.icon {
+    float: right;
+    color: #9EE000;
+    margin-top: 1%;
+    font-size: 30px;
+}
+
+.icon:hover {
+    cursor: pointer;
 }

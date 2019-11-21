@@ -108,9 +108,11 @@
     color: black !important;
     font-weight: bold !important;
     border-radius: 30px;
-    height: 40px !important;
-    width: 240px !important;
-    margin: 12px 40px 0 60px !important;
+    height: 20% !important;
+    width: 80% !important;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .createClubButton:active {
@@ -141,4 +143,22 @@
     text-align: left;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
+}
+
+.dropDownMenu {
+    background-color: black !important;
+}
+.dropDownMenuItem{
+    color: white !important;
+}
+
+.dropDownMenuItem > *{
+    color: white !important;
+}
+.dropDownMenuItem:hover{
+    color: black !important;
+}
+.dropDownMenuItem:hover > *{
+    color: black !important;
+    text-decoration: none;
 }
